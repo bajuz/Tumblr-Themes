@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<!-- PLEASE DON'T REMOVE THIS CREDIT
+ 
+  /$$$$$$$    /$$$$$$      /$$$$$  /$$   /$$   /$$$$$$  
+ | $$__  $$  /$$__  $$    |__  $$ | $$  | $$  /$$__  $$
+ | $$  \ $$ | $$  \ $$       | $$ | $$  | $$ | $$  \__/
+ | $$$$$$$  | $$$$$$$$       | $$ | $$  | $$ |  $$$$$$  
+ | $$__  $$ | $$__  $$  /$$  | $$ | $$  | $$  \____  $$
+ | $$  \ $$ | $$  | $$ | $$  | $$ | $$  | $$  /$$  \ $$
+ | $$$$$$$/ | $$  | $$ |  $$$$$$/ |  $$$$$$/ |  $$$$$$/
+ |_______/  |__/  |__/  \______/   \______/   \______/  
+ 
+ FASIFO FREE PREMIUM TUMBLR THEME by bajuz themes - www.bajuz.us
+ 
+-->  
+    <head>
+
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <meta name="color:Background" content="#ffffff"/>
+        <meta name="color:Post" content="#eeeeee"/>
+        <meta name="color:Links" content="#000"/>
+        <meta name="color:Links Hover" content="#999"/>
+        <meta name="color:Title" content="#000"/>
+        <meta name="color:Text" content="#000"/>
+        <meta name="color:Text Post" content="#000"/>
+        <meta name="color:Links Post" content="#000"/>
+        <meta name="color:Accent" content="#000"/>
+        <meta name="image:Logo" content="">
+        <meta name="if:Show Captions" content="1"/>
+        <meta name="if:Photo Icons" content="1"/>
+        <meta name="font:Body" content="Arial"/>
+        <meta name="text:Font Size" content="13px"/>
+        <meta name="text:Google Analytics" content=""/>
+
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<script>
+$(document).ready(function(){ $("#links [title]").style_my_tooltips({ tip_follows_cursor:true, tip_delay_time:90, tip_fade_speed:600, attribute:"title" }); })(jQuery);
+</script>
+
+{block:IndexPage}<script type="text/javascript" language="javascript" src=
+"http://static.tumblr.com/vaqsgdj/JKimt7g3g/infinitexmason.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+    function e(){ var e=4; }
+    function t(){ setTimeout(2e3)}
+    $("#content .post").each(function(){e()});
+    $("#content").imagesLoaded(function(){
+        $("#content").masonry({
+            itemSelector:".post",
+            isAnimated: false,
+            columnWidth:330,
+            hiddenStyle:{opacity:0},
+            visibleStyle:{opacity:1}
+        })
+    });
+    $("#content").infinitescroll({
+        navSelector:".pagination",
+        nextSelector:".pagination a.next",
+        itemSelector:"#content .post",
+        bufferPx:100,
+        loading:{
+            img:"http://static.tumblr.com/vaqsgdj/s5Pmgyueb/loading_ani.gif",
+            msgText:"LOADING",
+            finishedMsg:"NO MORE POSTS"},
+            errorCallback:
+                function(){
+                    $("#infscr-loading").fadeOut();
+                    $("#load").show();
+                    $("#load").html("No more posts").animate({opacity:0.8},500).fadeOut("normal") }},
+                function(n,r){var i=$(n).css({opacity:0});
+                i.imagesLoaded(
+                    function(){i.animate({opacity:1});
+                    $("#content").masonry("appended",i,!0)});
+                    e();
+                    t();
+                    var s=r.state.currPage;
+                    Tumblr.LikeButton.get_status_by_page(s);
+                });
+                if($("#load").length>0){
+                    $(window).unbind(".infscr");
+                    $("#load").click(
+                        function(){$("#content").infinitescroll("retrieve")
+                        })
+                }
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('#scroll-top').fadeIn(800);
+                        } else {
+                            $('#scroll-top').fadeOut(800);
+                        }
+                });
+                $("#scroll-top").click(function(){
+                    $("body,html").animate(
+                        {scrollTop:0},
+                        800,
+                        "easeInOutQuint"
+                        );
+                        return!1
+                });
+});    
+</script>
+{/block:IndexPage}
+
+{/block:IndexPage}
+
+<style type="text/css">
+/************************\ DEFAULT /************************/
+body { margin: 0; padding: 0; line-height: 25px; color: {color:Text}; font-family: {Font:Body}; font-size: {text:Font Size}; background-color: {color:Background}; overflow-x: hidden; }
+
+a { color: {color:Links}; text-decoration: none; word-break: break-word; -webkit-transition: color .3s ease-in-out; -moz-transition: color .3s ease-in-out; -o-transition: color .3s ease-in-out; transition: color .3s ease-in-out;}
+a:hover { color: {color:Links Hover};}
+blockquote { border-left: 2px solid {color:Text}; padding-left: 10px; margin: 15px;}
+p { word-break: break-word;}
+img { max-width: 100%;}
+form { padding: 0; margin: 0;}
+input { border: none; width: 100%; padding: 5px; background:{color:Background};}
+.none { display:none}
+.clear { clear:both;}
+/************************\ END DEFAULT /************************/
+
+/************************\ PACKAGE /************************/
+#wrap { margin: 0 auto;}
+#content { margin: 0 auto;}
+.side { z-index: 999; max-width: 980px; margin:100px auto 15px; text-align: center; font-weight: lighter; padding: 0;}
+#navigator { width: 150px; margin: 0 auto; padding: 15px 0; text-align:center;}
+
+#foot { margin: 30px auto 70px; opacity:.5;}
+ .credit { max-width: 960px; margin: 0 auto;}
+/************************\ END PACKAGE /************************/
+
+/************************\ CENTERBAR /************************/
+.title a{ padding: 0; font-size: 5.5em; font-weight: 900; line-height: 90%; letter-spacing: 2px; text-transform: uppercase; -webkit-transition: all 0s ease; -moz-transition: all 0s ease; -o-transition: all 0s ease; transition: all 0s ease; color: {color:Background}; text-shadow: 2px 0px 0 {color:Title}, -2px 0px 0 {color:Title}, 0px -2px 0 {color:Title}, 0px 2px 0 {color:Title}, 2px -2px 0 {color:Title}, -2px 2px 0 {color:Title}, 2px 2px 0 {color:Title}, -2px -2px 0 {color:Title};}
+
+.title a:hover{ color: {color:Title}; text-shadow: 2px 0px 0 transparent, -2px 0px 0 transparent, 0px -2px 0 transparent, 0px 2px 0 transparent, 2px -2px 0 transparent, -2px 2px 0 transparent, 2px 2px 0 transparent, -2px -2px 0 transparent;}
+
+.desc{ margin:20px 10px; padding:5px 10px; text-align: justify; background:{color:Background};}
+/************************\ END CENTERBAR /************************/
+
+/************************\ MENU /************************/
+#links{ margin:0 10px; line-height:10px; padding:6px 9px; text-align:left; letter-spacing: 1px; font-size:9px; text-transform:uppercase;}
+    
+#links { font-size:10.5px; height:auto; font-style:normal; text-align:left; padding-bottom: 2px; padding-top:0px; }
+#links ul { padding: 0; margin: 0;}
+#links li { position:relative; padding: 0; margin: 0 0 10px; list-style:none; display: inline-block; }
+#links li a { text-decoration: none; padding: 7px 6px;}
+
+#s-m-t-tooltip{	max-width:120px; z-index:9999; margin:-40px 14px 7px -20px; padding:5px; background:#444; color:#fff; font-size:.8em; line-height:normal; text-transform: uppercase; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3); -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3); box-shadow:2px 2px 0 rgba(0,0,0,0.15),-1px -1px 0 rgba(255,255,255,0.3);}
+
+#s-m-t-tooltip:after { position: absolute; top: 100%; border:solid transparent; border-top-color: #444; border-width: 5px; left: 50%; margin-left: -5px; content: '';}
+/************************\ END MENU /************************/
+
+/************************\ SEARCH /************************/
+.search { height:25px; margin: 0 auto; padding:0; text-align:left; display:inline-block;}
+.search form { margin: 0; padding: 0;}
+.search fieldset { margin: 0; padding: 0; border: none;}
+.search input { border: none; width:75%; background:{color:Background}; margin:0; padding:7px 4px; height:24px; font-size:10.5px; color:{color:Text}; display:inline; outline: none;}
+#sbmt { display:none; }
+/************************\ END SEARCH /************************/
+
+/************************\ POST /************************/
+.post { position:relative; padding: 5px; vertical-align: middle; background: {color:Post}; color:{color:Text Post}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease;}
+.post a { color:{color:Links Post};}
+
+.music { position:relative;}
+.box { background-color: #000; position: absolute; left: 50%; top: 110px; margin-left: -22.5px; z-index:2;}
+.player { width: 18px; height: 30px; overflow: hidden; margin: 5px 15px 4px 8px;}
+
+.permalink { margin-top:5px; text-align: left;}
+
+.ask { float: left; width:80%; padding:0 10px;}
+.ask p {padding:0; margin:0;}
+.asker_img { float: left; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px;}
+.chat { margin: 0; padding: 0 0 15px; list-style: none;}
+.label { font-weight: 900; }
+
+.link { text-decoration:underline; font-weight:900;}
+/************************\ END POST /************************/
+
+#infscr-loading { position: fixed; bottom: 10px; left: 10px; padding: 5px 10px; background: #FFF; z-index: 99999;}
+#infscr-loading img { float: left; width: 25px;}
+#infscr-loading div { float: left; line-height: 25px; margin-left: 5px;}
+
+#load { cursor:pointer; font-size: 15px; font-weight: 900; line-height: 90%; text-transform: uppercase; -webkit-transition: all 0s ease; -moz-transition: all 0s ease;     -o-transition: all 0s ease; transition: all 0s ease; color: {color:Background}; text-shadow: 1px 0px 0 {color:Title}, -1px 0px 0 {color:Title}, 0px -1px 0 {color:Title}, 0px 1px 0 {color:Title}, 1px -1px 0 {color:Title}, -1px 1px 0 {color:Title}, 1px 1px 0 {color:Title}, -1px -1px 0 {color:Title};
+}
+
+#load:hover{ color: {color:Title}; text-shadow: 1px 0px 0 transparent, -1px 0px 0 transparent, 0px -1px 0 transparent, 0px 1px 0 transparent, 1px -1px 0 transparent, -1px 1px 0 transparent, 1px 1px 0 transparent, -1px -1px 0 transparent;}
+
+{block:IndexPage}
+/************************\ INDEX PAGE /************************/
+.post { float: left; width: 250px; display: inline-block; margin: 15px; padding: 25px; }
+
+.pad { padding: 10px 25px 25px !important;}
+.no-pad {margin-left: -25px; margin-top: -25px; max-width: 300px;}
+.no-pad iframe,.no-pad embbed { width: 300px!important; height: auto!important;}
+
+.caption { padding:5px 0; margin:5px 0 0;}
+.caption p { margin:0; padding:0;}
+.caption blockquote { border-left: 2px solid {color:Text Post};}
+
+.permalink hr { opacity:.3; border-color:{color:Text Post}; }
+.icon ,.icon .like_button { float: right; display:inline-block; width: 17px!important; height: 17px!important; padding: 4px 0 0 5px; text-align: center; color: #000; cursor: pointer;}
+.icon a { margin: 4px auto;}
+.perma { position:relative; float: left; padding: 4px 0 0; height: 21px; font-weight: 900;}
+.perma a { color:#000!important;}
+.perma:hover span { visibility: visible; opacity:1;}
+.perma span { position: absolute; width: 70px; padding: 5px; margin-left:10px; text-align: center; line-height: normal; font-size: .7em;
+background: #555; color: #fff; font-style: normal; text-transform: uppercase; opacity: 0; z-index: 1; visibility: hidden; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+
+.perma span:after { content: ''; position: absolute; border: 5px solid transparent; border-right-color: #444; top: 5.5px; left: -10px;}
+
+.icon, .perma { cursor: pointer; opacity:.5; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
+.icon:hover, .perma:hover { opacity:1;}
+
+{block:IfPhotoIcons}
+.photo {padding:0!important; width:300px!important;}
+.hover {position:relative; text-align:center;}
+
+.bg,.ico {-webkit-transition: all .6s ease-in-out; -moz-transition: all .6s ease-in-out; -o-transition: all .6s ease-in-out; transition: all .6s ease-in-out;}
+
+.l,.r { width:100%; height:100%; position: absolute; width: 5px; height: 160px; background: #fff; border-radius:1000px;}
+
+.l{right: 50%; margin-right: -2px; -webkit-transform: rotate(-46deg); -moz-transform: rotate(-46deg); -ms-transform: rotate(-46deg); -o-transform: rotate(-46deg); transform: rotate(-46deg);}
+.r{left: 50%; margin-left: -2px; -webkit-transform: rotate(46deg); -moz-transform: rotate(46deg); -ms-transform: rotate(46deg); -o-transform: rotate(46deg); transform: rotate(46deg);}
+
+.ico { opacity:0; visibility:hidden; position: absolute; width:100%; top:50%; left:0;z-index:1; margin-top: -80px; text-align:center; }
+.bg {opacity:0; visibility:hidden; background:#000;width:100%;height:100%;left:0;top:0;position:absolute; }
+.like {text-align: center; margin-top: 20px;}
+.rblg {text-align: center; position:absolute; margin: 65px; margin-left: 135px;}
+.info { width: 30px; height: 30px; position: absolute; top: 0; left: 0; margin: 65px 0 0 85px; }
+.zoom { width: 30px; height: 30px; position: absolute; top: 0; right: 0; margin: 65px 85px 0 0; }
+
+@-webkit-keyframes l { 0% { opacity: 0; -webkit-transform: scale(0) rotate(-46deg);} 100% { opacity: 1; -webkit-transform: scale(1) rotate(-46deg); } }
+@-moz-keyframes l { 0% { opacity: 0; -moz-transform: rotate(-46deg) scale(0);} 100% { opacity: 1; -moz-transform: scale(1) rotate(-46deg); } }
+@-o-keyframes l { 0% { opacity: 0; -o-transform: scale(0) rotate(-46deg);} 100% { opacity: 1; -o-transform: scale(1) rotate(-46deg); } }
+@keyframes l { 0% { opacity: 0; transform: scale(0) rotate(-46deg); } 100% {    opacity: 1; transform: scale(1) rotate(-46deg); } }
+
+@-webkit-keyframes r { 0% { opacity: 0; -webkit-transform: scale(0) rotate(46deg);} 100% { opacity: 1; -webkit-transform: scale(1) rotate(46deg); } }
+@-moz-keyframes r { 0% { opacity: 0; -moz-transform: rotate(46deg) scale(0);} 100% { opacity: 1; -moz-transform: scale(1) rotate(46deg); } }
+@-o-keyframes r { 0% { opacity: 0; -o-transform: scale(0) rotate(46deg);} 100% { opacity: 1; -o-transform: scale(1) rotate(46deg); } }
+@keyframes r { 0% { opacity: 0; transform: scale(0) rotate(46deg); } 100% {    opacity: 1; transform: scale(1) rotate(46deg); } }
+
+@-webkit-keyframes ico { 50% { opacity: 0; -webkit-transform: scale(0) rotate(46deg);} 100% { opacity: 1; -webkit-transform: scale(1) rotate(0); } }
+
+.hover:hover .ico {opacity:1; visibility:visible; }
+
+.like ,.rblg ,.ico .info ,.zoom{ transform: scale(0) rotate(360deg); -ms-transform: scale(0) rotate(360deg); -webkit-transform: scale(0) rotate(360deg); -webkit-transition: all .6s ease-in-out; -moz-transition: all .6s ease-in-out; -o-transition: all .6s ease-in-out; transition: all .6s ease-in-out;}
+
+.like:hover ,.rblg:hover ,.ico:hover .info:hover ,.zoom:hover { opacity:.7;}
+
+.hover:hover .ico .like , .hover:hover .ico .rblg ,
+.hover:hover .ico .info , .hover:hover .ico .zoom
+{ transform: scale(1) rotate(0); -ms-transform: scale(1) rotate(0); -webkit-transform: scale(1) rotate(0); }
+
+.hover:hover .ico .l {-webkit-animation: l  1s; -moz-animation: l 1s; -ms-animation: l 1s;}
+.hover:hover .ico .r {-webkit-animation: r  1s; -moz-animation: r 1s; -ms-animation: r 1s;}
+.hover:hover .bg {opacity:.5; visibility:visible;}{/block:IfPhotoIcons}
+
+/************************\ END INDEX PAGE /************************/
+{block:IndexPage}
+
+{block:PermalinkPage}
+/************************\ PERMALINK PAGE /************************/
+.side { max-width:750px;}
+.post { display:block; max-width:700px; margin: 20px auto 0;}
+.photo { text-align: center;}
+#notes { max-width: 700px; margin: 0 auto;}
+.text { padding: 20px; max-width: 680px;}
+.ask { width:90%!important;}
+.meta { padding-top:10px; margin: 0 auto; width: 700px;}
+
+.caption{ margin: 0 auto; max-width: 700px;}
+ol.notes::-webkit-scrollbar{display:none;}
+ol.notes{padding: 0 20px 0 0;margin 0px 0px;list-style-type:none;font-size:11 px; max-height: 190px; overflow-y: auto;}
+ol.notes li.note{border-top:1px dotted {color:Accent};padding:0px;font-size:11px;}
+ol.notes li.note img{padding:0;}
+ol.notes li.note img.avatar{vertical-align:-15px;margin-right:5px;width:16px;height:16px;}
+ol.notes li.note a img.avatar{padding: 10px;border-width:0;border:none;}
+ol.notes li.note img{padding:0;border-width:0;border:none;}
+ol.notes li.note span.action{font-weight:bold;}
+ol.notes li.note.answer_content{font-weight:normal;}
+ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}
+ol.notes li.note.blockquote a{text-decoration:none;}
+/************************\ END PERMALINK PAGE /************************/
+{/block:PermalinkPage}
+
+{CustomCSS}
+
+/************************\ RESPONSIVE STYLE /************************/
+@media only screen and (max-width: 600px){ #wrap { max-width: 400px;} #foot,.side {position:relative; max-width:330px;} #content {margin: 0 35px;}}
+@media only screen and (min-width: 600px) and (max-width: 1020px){ #wrap { max-width: 730px;} #content {margin-left: 30px;} .post { padding:20px;margin:20px 15px;} #foot,.side { max-width:600px;} .no-pad {margin-left: -20px; margin-top: -20px; max-width: 290px;} .photo .over {margin: -20px; padding: 18px 20px 0;} .no-pad iframe, embbed { width: 290px!important;}}
+@media only screen and (width: 1024px){ }
+@media only screen and (min-width: 1024px){ #wrap { max-width: 1035px;} #content{margin-left: 8px;}}
+@media only screen and (max-width: 1000px){ #notes { margin-left: 100px;}}
+/************************\ END RESPONSIVE STYLE /************************/
+
+#scroll-top {display:none;position:fixed;bottom:10px;right:10px;}
+
+</style>
+
+<body>
+
+<div id="wrap">
+
+<div class="side">
+
+<div class="links">
+{block:IfLogoImage}<a title="{Title}" href="/"><img src="{Image:Logo}"></a>{/block:IfLogoImage}{block:IfNotLogoImage}<div class="title"><a title="{Title}" href="/">{Title}</a></div>{/block:IfNotLogoImage}
+
+{block:description}<div class="desc">{description}</div>{/block:description}
+
+<div id="links">
+<ul>
+<li><a title="Refresh" href="/">Home</a></li>
+{block:AskEnabled}<li><a title="Contact" href="/ask">contact</a></li>{/block:AskEnabled}
+
+{block:SubmissionsEnabled}<li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+
+{block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+
+<li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
+<li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
+
+<li><div class="search"><form id="searchform" action="/search" method="get"><input id="sbmt" type="submit" value="search"><input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}"></form></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+
+</div>
+
+<div id="content">
+
+{block:Posts}
+<div class="post{block:Photo} photo{/block:Photo}{block:Text} text{/block:Text}{block:Link} text{/block:Link}{block:Quote} text{/block:Quote}{block:Chat} text{/block:Chat}{block:Answer} text{/block:Answer}" id="{Postid}">
+
+{block:Text}
+{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}
+{Body}
+{/block:Text}
+
+{block:Link}
+<a href="{URL}" class="link" {Target}>{Name}</a>
+{block:Description}<div class="description">{Description}</div>{/block:Description}
+{/block:Link}
+
+{block:Quote}
+<b>"{Quote}"</b>
+{block:Source}<br>&mdash; {Source}{/block:Source}
+{/block:Quote}
+
+{block:Photo}
+{block:IndexPage}
+{block:IfPhotoIcons}<div class="hover">
+<div class="ico">
+    <div class="r"></div>
+    <div class="l"></div>
+    <div class="like">{LikeButton color="white" size="25"}</div>
+    <div class="rblg">{ReblogButton color="white" size="25"}</div>
+    <a class="info" href="{Permalink}" title="{lang:Permalink}">
+        <img title="{lang:Permalink}" alt="{lang:Permalink}" src="http://static.tumblr.com/vaqsgdj/c26mtj2bi/info.png">
+    </a>
+    <a class="zoom" href="http://{name}.tumblr.com/image/{postid}" title="{lang:Zoom}">
+        <img title="{lang:Zoom}" alt="{lang:Zoom}" src="http://static.tumblr.com/vaqsgdj/xdXmtj2wq/zoom.png">
+    </a>
+</div>
+<div class="bg"></div>{/block:IfPhotoIcons}
+<img src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
+{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}
+{/block:Photo}
+
+{block:Chat}
+{block:Title}<h2>{Title}</h2>{/block:Title}
+<ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ul>
+{/block:Chat}
+
+{block:Answer}
+<img class="asker_img" src="{AskerPortraitURL-24}"/>
+<div class="ask"><b>{Asker} asked :</b><p>{Question}</p></div>
+<img class="asker_img" src="{PortraitURL-24}"/>
+<div class="ask"><b>{Name} answered :</b>{Answer}</div>
+<div class="clear"></div>
+{/block:Answer}
+
+{block:Video}
+<div class="video{block:IndexPage} no-pad">{Video-250}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>
+{/block:Video}
+
+{block:Photoset}
+{block:IndexPage}{Photoset-250}{/block:IndexPage}{block:PermalinkPage}{Photoset-700}{/block:PermalinkPage}
+{/block:Photoset} 
+
+{block:Audio}<div class="music">{block:AlbumArt}<a href="{Permalink}"><img class="no-pad" src="{AlbumArtURL}"></a>{/block:AlbumArt}
+<div class="box"><div class="player">{AudioPlayerBlack}</div></div></div>
+{/block:Audio}
+
+{block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}{/block:IndexPage}
+
+{block:IndexPage}<div class="permalink{block:Photo}{block:IfPhotoIcons} none{/block:IfPhotoIcons}{/block:Photo}"><hr><div class="icon">{LikeButton color="black" size="15"}</div><div class="icon">{ReblogButton color="black" size="15"}</div><div class="perma"><a title="{lang:Permalink}" href="{Permalink}">{lang:Permalink}</a><span>{NoteCountWithLabel}</span></div></div>{/block:IndexPage}
+
+</div>
+
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}
+
+{/block:Posts}
+
+{block:ContentSource}
+<!— {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
+{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+<div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+
+{block:Pagination}<div class="pagination" id="pagination" style="display:none;">{block:NextPage}<li><a class="next" href="{NextPage}">»</a></li>{/block:NextPage}</div>{/block:Pagination}
+<div class="clear"></div>
+</div>    
+    
+{block:IndexPage}
+<div id="navigator">
+    <a id="load">Load More</a>
+</div>
+<div id="foot">
+    <a href="#" id="scroll-top">Top</a>
+    <div class="credit">
+        ©2013 {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a>
+    </div>
+</div>{/block:IndexPage}    
+    
+</div>
+
+{block:IfGoogleAnalytics}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+{/block:IfGoogleAnalytics}
+
+</body>
+</html>
