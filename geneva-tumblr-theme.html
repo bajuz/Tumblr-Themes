@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--------------------------------------------------
+                    GENEVA THEME BY                  
+----------------------------------------------------
+
+ /$$$$$$$   /$$$$$$     /$$$$$ /$$   /$$ /$$$$$$$$
+| $$__  $$ /$$__  $$   |__  $$| $$  | $$|_____ $$ 
+| $$  \ $$| $$  \ $$      | $$| $$  | $$     /$$/ 
+| $$$$$$$ | $$$$$$$$      | $$| $$  | $$    /$$/  
+| $$__  $$| $$__  $$ /$$  | $$| $$  | $$   /$$/   
+| $$  \ $$| $$  | $$| $$  | $$| $$  | $$  /$$/    
+| $$$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/ /$$$$$$$$
+|_______/ |__/  |__/ \______/  \______/ |________/
+
+----------------------------------------------------
+             POWERED by TUMBLR © 2012              
+--------------------------------------------------->
+
+<head>
+<meta name="image:Background" content=""/> 
+<meta name="image:Header" content=""/>
+
+<meta name="color:Background" content="#FFFFFF"/>
+<meta name="color:Content Background" content="#FFFFFF"/>
+<meta name="color:Text" content="#000"/>
+<meta name="color:Title" content="#000"/>
+<meta name="color:Accent" content="#999999"/>
+<meta name="color:Selection" content="#999999"/>
+<meta name="color:Navigation Background" content="#FFFFFF"/>
+<meta name="color:Navigation Font" content="#000000"/>
+<meta name="color:Navigation Hover" content="#888888"/>
+ 
+<meta name="font:Title" content="Arial Black"/>
+<meta name="font:Body" content="Geneva"/>
+<meta name="font:Navigator" content="Arial Black"/>
+
+<meta name="if:Infinite Scroll" content="1" />
+<meta name="if:1 Column" content="0" />
+<meta name="if:2 Columns" content="0" />
+<meta name="if:3 Columns" content="0" />
+
+<meta name="if:Show Home" content="1"/>
+<meta name="if:Show About" content="1"/>
+<meta name="if:Show Archive" content="1"/>
+<meta name="if:Show Ask" content="1"/>
+<meta name="if:Show Reblog Source" content="1"/>
+<meta name="if:Show Post Notes" content="1"/>
+<meta name="if:Show Social Share" content="1" />
+ 
+<meta name="text:Body font size" content="15"/>
+<meta name="text:Title Text Size" content="5em"/>
+<meta name="text:Header Width" content=""/>
+
+<meta name="text:Header title" content="" />
+<meta name="text:Home Title" content="Home"/>
+<meta name="text:About Title" content="About"/>
+<meta name="text:Archive Title" content="Archive"/>
+<meta name="text:Ask Title" content="Contact"/>
+
+<meta name="text:Custom Link One" content="" />
+<meta name="text:Custom Link One Title" content="" />
+<meta name="text:Custom Link Two" content="" />
+<meta name="text:Custom Link Two Title" content="" />
+<meta name="text:Custom Link Three" content="" />
+<meta name="text:Custom Link Three Title" content="" />
+<meta name="text:Custom Link Four" content="" />
+<meta name="text:Custom Link Four Title" content="" />
+<meta name="text:Custom Link Five" content="" />
+<meta name="text:Custom Link Five Title" content="" />
+
+<meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Google Analytics Web Property ID" content=""/>
+
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="{Favicon}">
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+<script type="text/javascript" language="javascript" src="http://dl.dropbox.com/u/71900253/Themes/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/V07m9079y/jquery.masonry.min.js"></script>
+<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/hxkm9078b/imagesload.js"></script> 
+<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/lsIma4u0x/jquery_minz.js"></script> 
+{block:IndexPage}{block:IfInfiniteScroll}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/tkym9078y/infinitescroll.js"></script>{/block:IfInfiniteScroll}{/block:IndexPage} 
+<style type="text/css">
+body {background:{color:Background}  url({image:Background}) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";font-family:{font:Body}; color:{color:Text}; font-size:{text:Body Font Size}px; line-height:15px;}
+a {color:{color:Text};text-decoration:none; -moz-transition: 0.1s ease-in; -webkit-transition: 0.1s ease-in; -o-transition: 0.1s ease-in; transition: 0.1s ease-in;}
+a img,img {border:none; border:0; outline:none;}
+
+::selection, ::-moz-selection, ::-webkit-selection {color:{color:Selection}; background-color: none;}
+::-webkit-scrollbar{width:7px;height:8px;}
+::-webkit-scrollbar-button:start:decrement
+::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:{color:background};-webkit-border-radius:0;-webkit-border-bottom-right-radius:3px;-webkit-border-bottom-left-radius:3px;}
+::-webkit-scrollbar-thumb:vertical{height:50px;background-color:{color:Accent};}
+::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:none;}
+
+#tumblr_controls {top: 15px!important; right:15px!important;}
+
+#container {margin:0 auto; {block:If1Column}width:520px;{/block:If1Column}{block:If2Columns}width:620px;{/block:If2Columns}{block:If3Columns}width:930px;{/block:If3Columns}}
+#head {margin:{block:IfHeaderImage}2{/block:IfHeaderImage}{block:IfNotHeaderImage}5{/block:IfNotHeaderImage}0px auto 15px; position: relative; z-index: 1000; clear:both; text-align:center;}
+#head .title { font-size:{text:Title Text Size}; font-weight:900; font-family:{font:Title}; font-style:underscor; text-transform: uppercase; margin:0 auto; color:{color:Title} }
+#head .nav {margin:30px auto 0; padding:20px 0; background:{color:Navigation Background}; font-family:{font:Navigator}; font-weight:900;}
+#head .nav li , #head .nav li a { list-style-type: none; display: inline-block; color:{color:Navigation Font}; text-decoration: none; font-size: 1.1em; text-transform:uppercase; }
+#head .nav li a:hover { color:{color:Navigation Hover};}
+#head .nav span { color:{color:Navigation Font}; position: relative; top:-2px; font-size: .9em;margin: 0px 10px; }
+#descript { width:94%; background-color:{color:content background}; margin:-10px auto {block:PermalinkPage}20px{/block:PermalinkPage}; padding:10px; display:none;} 
+
+#posts {{block:PermalinkPage}width:700px;{/block:PermalinkPage}margin:0 auto;}.content {background-color:{color:content background}; padding:10px 10px 1px;{block:PermalinkPage}0px{/block:PermalinkPage};}#post img {width:100%;}
+.content embed, .content iframe {width:100%;}#video{min-height: 500px;}.music {margin-bottom:10px;}
+.audio_player{padding:5px 0;background:#000!important;}{block:IndexPage}
+
+.overlay { width:100%; position:relative; border:none; padding:0; margin:0;}
+.overlay img{ display:block; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+.overlay .hover { position:absolute; height:100%; background-image: url('http://static.tumblr.com/vaqsgdj/F6lm4tled/alpha.png'); background:rgba(0,0,0,.65); opacity:0; visibility: hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-transition: all .5s ease;
+-moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease;}
+.overlay .hover{width:100%;}
+.overlay:hover .hover { opacity:1; visibility: visible; -webkit-transition: all 0.8s ease; -moz-transition: all 0.8s ease; transition: all 0.8s ease;}
+.overlay .hover .up { {block:If1Column}width:480px; font-size: 3.2em;{/block:If1Column}{block:IfNot1Column}width:230px; font-size: 2.2em;{/block:IfNot1Column}}
+.up {margin: -20px 0 0 10px; position: absolute; text-align: center; text-transform: uppercase; top: {block:If1Column}3.5em{/block:If1Column}{block:IfNot1Column}45%{/block:IfNot1Column};}
+.up a {color:#FFF; font-weight: 900; line-height: {block:If1Column}40px{/block:If1Column}{block:IfNot1Column}25px{/block:IfNot1Column};}
+.overlay .hover .up a {display:block;}
+
+.overlay .hover .dwn { {block:If1Column}width:480px; font-size: 1em;{/block:If1Column}{block:IfNot1Column}width:230px; font-size: .75em;{/block:IfNot1Column} }
+.dwn {color:#FFF; margin: -20px 0 0 10px; position: absolute; text-align: center; text-transform: uppercase; bottom: {block:If1Column}1em{/block:If1Column}{block:IfNot1Column}.5em{/block:IfNot1Column};}
+.dwn a {color:#FFF; font-weight: 900; line-height: 25px;}
+
+#post {padding:30px;}
+.permalink { display:none; opacity:0; text-transform:uppercase; font-size:.75em; text-align:center; position: relative; margin: -8px 0; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease;}
+.permalink a{ text-decoration:none;}
+.content:hover .permalink{ display:block; opacity:1; margin: 0 0 5px;
+-webkit-transition: all .3s ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease;}
+
+{/block:IndexPage}blockquote {margin: 0px 0px 10px 25px; padding: 0px 0px 0px 10px; border-left:3px solid {color:Text};}
+.ask {width: 100%; padding: 10px; font-size: .9em; font-weight:bolder; background: {color:Accent}; }
+.triangle{ padding:0; margin:0px 8px; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 12px solid {color:Accent}; height: 0; width: 0;}
+.post_asker { height:24px; padding:5px 5px 10px;}
+.answer_portrait {width:24px!important;}
+.asker{ position: relative; margin: 0 0 0 5px; top:-7px;}
+.text_answer { padding: 7px 5px; border-top: 1px dotted {color:Text};}
+.text_answer p { margin:0; padding:0;}
+ul.chat { list-style-type: none; padding: 0; margin: 0 auto 15px;}
+li.chat {list-style-type: none;}
+.user_1 {margin:3px 0;}
+
+#infscr-loading { position: fixed; bottom: 25px; left: 50%; margin-left: 8px; z-index: 6000; background:#fff; padding:5px; height:16px;}
+#infscr-loading .infscr-text {margin-top:20px;}
+
+#footer {float: left;clear: both;padding-top:10px;}  
+
+.hide {display: none;}
+
+#bjz {display: none;width: 100%;height: 100%;position: absolute;z-index: 800;top:0px;left:0px;}
+
+{block:PermalinkPage}
+.notes { clear:both;}
+.notestop { margin-bottom:50px; border-top:1px solid {color:content background}; padding:0px 4px 0px;}
+ol,li {margin:0px; padding:0px;}
+.note {list-style-type: none; margin:0px;}
+.more_notes_link_container{padding:0px!important;}
+.note, .like{float:left;margin:5px 5px -5px 0px;line-height: 16px;}
+.action, .note blockquote, .like blockquote{display:none;}
+.more_notes_link_container,.more_notes_link_container a,.more_notes_link_container span{font-size: 9px; font-weight: bold; padding: 10px; margin: 15px 0; text-align: center; text-transform: uppercase; background: {color:Content Background}; color: {color:Content Font};}
+.action a{color: #fff!important;}
+.note, .like{z-index:10;}
+.note .avatar {width:23px!important;}
+.note:hover, .like:hover{position:relative;z-index:100;}            
+.note:hover .action, .like:hover .action{ font-size:11px; display: block; position:absolute; float:left; white-space:nowrap; top:-2em; left:.5em; background:#000; color:#fff; padding: 2px 5px; z-index:111;}      
+{/block:PermalinkPage}
+
+{CustomCSS}
+
+</style>
+{block:IndexPage}<script type="text/javascript">
+    $(document).ready(function() {
+
+        var $container = $('#posts');
+        $('#bjz').height($(document).height());
+		if (! $.support.leadingWhitespace) {$('.photoset a:first-child').css({'display':'inline'});};
+		
+			var bgcolor = '#ffffff';
+			var ajaxLoader = 'http://static.tumblr.com/vaqsgdj/GDGm8qo7q/radar.gif';		
+		{block:IfInfiniteScroll}
+$container.infinitescroll({
+navSelector  : '#footer', nextSelector : 'a.next', itemSelector : '#posts div#post', extraScrollPx: 150,bufferPx: 10,debug: false,
+loading: { msgText: ' ', finishedMsg: 'F I N I S H', img: ajaxLoader} },
+function( newElements ) {							
+if ($(window).height() >= $(document).height() - 100 ) { $(window).scroll(); };			
+var $newElems = $(newElements); $newElems.hide(); $newElems.imagesLoaded(function () {$container.masonry('appended', $newElems, { isAnimated: false, animationOptions: { duration: 100, easing: 'linear', queue: false } }, function () { $newElems.fadeIn('slow'); });
+});});
+		{/block:IfInfiniteScroll}
+		$container.imagesLoaded(function(){
+			$container.masonry({
+				itemSelector: '#post',
+                columnWidth: 1,
+                isFitWidth: true
+				}).find('#post');
+			});
+            			
+$(window).scroll(function () { 	$('#bjz').height($(document).height()); });
+$(window).resize(function () { 	$('#bjz').height($(document).height()); });
+{block:IfInfiniteScroll}$(window).scroll();{/block:IfInfiniteScroll}
+
+});
+</script>
+<iframe id="likeiframe" style="display:none;"></iframe>
+{/block:IndexPage}
+</head>
+<body><div id="container">
+<div id="head">
+
+<a href="/" class="title" title="{Title}">{block:IfHeaderImage}<img src="{image:Header}" style="width:{text:Header Width}" />{/block:IfHeaderImage}{block:IfNotHeaderImage}{block:ifNotHeadertitle}{title}{/block:ifNotHeadertitle}{block:ifHeadertitle}{text:Header title}{/block:ifHeadertitle}{/block:IfNotHeaderImage}</a>
+
+<div class="nav">
+{block:ifShowHome}<li><a href="/">{block:ifhometitle}{text:home Title}{/block:ifhometitle}{block:ifnothometitle}Home{/block:ifnothometitle}</a></li> <span>x</span>{/block:ifShowHome}
+{block:ifShowAbout}<li><a href="#" onclick="$('#descript').slideToggle('medium');">{block:ifabouttitle}{text:about Title}{/block:ifabouttitle}{block:ifnotabouttitle}About{/block:ifnotabouttitle}</a></li> <span>x</span>{/block:ifShowAbout}
+{block:ifShowArchive}<li><a href="/archive">{block:ifarchivetitle}{text:archive Title}{/block:ifarchivetitle}{block:ifnotarchivetitle}Archive{/block:ifnotarchivetitle}</a></li> <span>x</span>{/block:ifShowArchive}
+{block:AskEnabled}{block:ifShowAsk}<li><a title="Ask or Message" href="/ask">{block:ifasktitle}{text:Ask Title}{/block:ifasktitle}{block:ifnotasktitle}{AskLabel}{/block:ifnotasktitle}</a></li><span>x</span>{/block:ifShowAsk}{/block:AskEnabled}
+{block:ifCustomLink1Title}<li><a href="{text:Custom Link 1}" title="{text:Custom Link 1 Title}">{text:Custom Link 1 Title}</a></li><span>x</span>{/block:ifCustomLink1Title}
+{block:ifCustomLink2Title}<li><a href="{text:Custom Link 2}" title="{text:Custom Link 2 Title}">{text:Custom Link 2 Title}</a></li><span>x</span>{/block:ifCustomLink2Title}
+{block:ifCustomLink3Title}<li><a href="{text:Custom Link 3}" title="{text:Custom Link 3 Title}">{text:Custom Link 3 Title}</a></li><span>x</span>{/block:ifCustomLink3Title}
+{block:ifCustomLink4Title}<li><a href="{text:Custom Link 4}" title="{text:Custom Link 4 Title}">{text:Custom Link 4 Title}</a></li><span>x</span>{/block:ifCustomLink4Title}
+{block:ifCustomLink5Title}<li><a href="{text:Custom Link 5}" title="{text:Custom Link 5 Title}">{text:Custom Link 5 Title}</a></li><span>x</span>{/block:ifCustomLink5Title}
+{block:HasPages}{block:Pages}<li><a href="{URL}" target="_blank">{Label}</a></li><span>x</span>{/block:Pages}{/block:HasPages}
+<li><a href="http://www.bajuz.com">Theme</a></li>
+</div></div>
+
+{block:Description}<div id="descript">{Description}</div>{/block:Description}
+
+<div id="bjz"></div><div id="posts">
+{block:Posts}
+<div id="post"{block:IndexPage}style="{block:If1Column}width:500px;{/block:If1Column}{block:IfNot1Column}width:250px{/block:IfNot1Column}"{/block:PermalinkPage}{block:IndexPage}style="width:700px"{/block:PermalinkPage}>
+<div class="content" {block:IndexPage}{block:Photo}style="padding:0!important;background-color:transparent;{/block:Photo}{block:Video}padding:0!important;{/block:Video}"{/block:IndexPage}> 
+
+{block:Text}
+{block:Title}{Title}{/block:Title}
+{Body}
+{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel}  //  PERMALINK</a></div>{/block:IndexPage}
+{/block:Text}
+
+{block:Photo}
+{block:IndexPage}<div class="overlay"><a href="{Permalink}" target="_blank"><div class="hover"><div class="up"><a href="{Permalink}" title="{NoteCount} Notes"><span id="notes{PostID}">{NoteCount}</span><br>Notes</a></div><div class="dwn"> <a title="Like" id="like{PostID}" href="javascript:bjz('{PostID}','{Permalink}','');">Like</a> // <a href="{ReblogURL}" target="_blank" title="Reblog">Reblog</a> // <a href="{Permalink}" target="_blank" title="Permalink">Permalink</a></div></div>
+<div style="border:none"><img src="{PhotoURL-500}"  alt="{PhotoAlt}" border="0"/></div></a>{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<div style="border:none"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></div>{LinkCloseTag}{/block:PermalinkPage}{block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}</div>{/block:IndexPage}{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:PermalinkPage}
+{/block:Photo}
+
+{block:Link}
+<a href="{URL}" class="link" {Target}>{Name}</a>
+{block:Description}<div class="description">{Description}</div>{/block:Description}
+{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}
+{/block:Link}
+                
+{block:Quote}
+<a style="border:0 !important">"{Quote}"</a>
+{block:Source}
+<p>&mdash; {Source}</p>
+{/block:Source}
+{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}{/block:Quote}
+
+{block:Chat}
+{block:Title}<h2>{Title}</h2>{/block:Title}
+<ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ul>
+{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}{/block:Chat}
+
+{block:Video}
+<div id="video">{Video-500}</div>
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:PermalinkPage}
+{block:IndexPage}<div class="permalink"><br class="both"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}{/block:Video}
+
+{block:Photoset}
+{block:IndexPage}<a href="{Permalink}">{Photoset-250}</a>{/block:IndexPage}
+{block:PermalinkPage}{Photoset-500}{/block:PermalinkPage}
+{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:PermalinkPage}
+{/block:Photoset}
+
+{block:Answer}
+<div class="ask">{Question}<br></div>
+<div class="triangle"></div>
+<div class="post_asker"><img class="answer_portrait" src="{AskerPortraitURL-24}"/> {Asker}</div>
+<div class="text_answer">{Answer}</div>
+{/block:Answer}
+         
+{block:Audio}
+{block:AlbumArt}<img src="{AlbumArtURL}">{/block:AlbumArt}<div class="music">{AudioPlayerBlack}</div>
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:PermalinkPage}{block:IndexPage}<div class="permalink"><a href="{Permalink}">{NoteCountWithLabel} // PERMALINK</a></div>{/block:IndexPage}
+{/block:Audio}
+         
+{block:PermalinkPage}
+<br>{block:IfShowSocialShare}<div class="addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone" g:plusone:size="medium"></a><a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4fca2f4814e924ac"></script>{/block:IfShowSocialShare}<br><br>{block:Date}<i>Posted {TimeAgo}{block:IfShowReblogSource}{block:RebloggedFrom},reblogged from <a href="{ReblogParentURL}" title="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}{block:RebloggedFrom} ,originally posted by <a href="{ReblogRootURL}">{ReblogRootName}</a> {/block:RebloggedFrom}{/block:IfShowReblogSource} with {NoteCountWithLabel}{block:hasTags}&nbsp;{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}{/block:HasTags}</i>{/block:Date}. {block:IfDisqusShortname}<br><br><div class="notecontainer" style="padding:10px 10px 10px 10px;"><div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript></div></div>{/block:IfDisqusShortname}<br><br>{block:IfShowPostNotes}{block:PostNotes}{PostNotes}{/block:PostNotes}{/block:IfShowPostNotes}<br style="clear:both;"><br>{/block:PermalinkPage}
+</div></div>
+{/block:Posts}
+<p id="footer" class="{block:IfInfiniteScroll}hide{/block:IfInfiniteScroll}">{block:PreviousPage}<a class="prev" href="{PreviousPage}">&#171; Previous</a>{/block:PreviousPage}{block:NextPage}<a class="next" href="{NextPage}">Next &#187;</a>{/block:NextPage}</p>
+</div>
+
+</div>
+    
+
+{block:ifGoogleAnalyticsWebPropertyID}
+                <!-- Google Analytics Integration -->
+                <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("{text:Google Analytics Web Property ID}");
+                pageTracker._trackPageview();
+                } catch(err) {}</script>
+{/block:ifGoogleAnalyticsWebPropertyID}
+    
+</body>
+</html>
