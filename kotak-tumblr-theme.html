@@ -29,8 +29,15 @@
         <meta name="color:Title" content="#000"/>
         <meta name="color:Text" content="#000"/>
         <meta name="color:Accent" content="#000"/>
+        <meta name="image:Background" content="">
         <meta name="image:Logo" content="">
+        <meta name="if:Show RSS" content="1"/>
+        <meta name="if:Show Theme" content="1"/>
+        <meta name="if:Show Search" content="1"/>
+        <meta name="if:Show Archive" content="1"/>
         <meta name="if:Show Captions" content="1"/>
+        <meta name="if:Background Repeat" content="0"/>
+        <meta name="if:Show Load More Button" content="1"/>
         <meta name="font:Body" content="Arial"/>
         <meta name="text:Font Size" content="13px"/>
         <meta name="text:Google Analytics" content=""/>
@@ -38,13 +45,13 @@
 {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/nP5msp4zm/script.js"></script>
-{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/mgrmsozmb/infinitescroll.js"></script>{/block:IndexPage}
+<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/pftmxbu2h/script.js"></script>
+{block:IndexPage}{block:IfShowLoadMoreButton}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/mgrmsozmb/infinitescroll.js"></script>{/block:IfShowLoadMoreButton}{block:IfNotShowLoadMoreButton}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/2Uumxbu16/infinitescroll.js"></script>{/block:IfNotShowLoadMoreButton}{/block:IndexPage}
 <script>$(document).ready(function(){ $("#menu").toggle(function(){ $("#links").slideToggle("fast"); $("#menu").css({"background-color":"{color:Accent}","color":"{color:Background}"});}, function () { $("#links").slideToggle("fast"); $("#menu").css({"background-color":"{color:Background}","color":"{color:Links}"}); }); });</script>
 
 <style type="text/css">
 /************************\ DEFAULT /************************/
-body { margin: 0; padding: 0; line-height: 25px; color: {color:Text}; font-family: {Font:Body}; font-size: {text:Font Size}; background-color: {color:Background}; overflow-x: hidden; }
+body { margin: 0; padding: 0; line-height: 25px; color: {color:Text}; font-family: {Font:Body}; font-size: {text:Font Size}; background: {color:Background} url('{image:background}') {block:IfBackgroundrepeat}left top repeat{/block:IfBackgroundrepeat}; {block:IfNotBackgroundrepeat}background-size:cover;{/block:IfNotBackgroundrepeat} overflow-x: hidden; }
 
 a { color: {color:Links}; text-decoration: none; word-break: break-word;}
 a:hover { color: {color:Links Hover};}
@@ -120,8 +127,7 @@ a.title:hover{ color: {color:Title}; text-shadow: 2px 0px 0 transparent, -2px 0p
 #infscr-loading img { float: left; z-index:9999;}
 .infscr-text { display:none;}
 
-#load { font-size: 15px; font-weight: 900; line-height: 90%; text-transform: uppercase; -webkit-transition: all 0s ease; -moz-transition: all 0s ease;     -o-transition: all 0s ease; transition: all 0s ease; color: {color:Background}; text-shadow: 1px 0px 0 {color:Accent}, -1px 0px 0 {color:Accent}, 0px -1px 0 {color:Accent}, 0px 1px 0 {color:Accent}, 1px -1px 0 {color:Accent}, -1px 1px 0 {color:Accent}, 1px 1px 0 {color:Accent}, -1px -1px 0 {color:Accent};
-}
+#load { font-size: 15px; font-weight: 900; line-height: 90%; text-transform: uppercase; -webkit-transition: all 0s ease; -moz-transition: all 0s ease;     -o-transition: all 0s ease; transition: all 0s ease; color: {color:Background}; text-shadow: 1px 0px 0 {color:Accent}, -1px 0px 0 {color:Accent}, 0px -1px 0 {color:Accent}, 0px 1px 0 {color:Accent}, 1px -1px 0 {color:Accent}, -1px 1px 0 {color:Accent}, 1px 1px 0 {color:Accent}, -1px -1px 0 {color:Accent}; {block:IfNotShowLoadMoreButton}display:none!important;{/block:IfNotShowLoadMoreButton}}
 
 #load:hover{ color: {color:Accent}; text-shadow: 1px 0px 0 transparent, -1px 0px 0 transparent, 0px -1px 0 transparent, 0px 1px 0 transparent, 1px -1px 0 transparent, -1px 1px 0 transparent, 1px 1px 0 transparent, -1px -1px 0 transparent;}
 
@@ -203,12 +209,11 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 
 {block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
 
-<li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
-<li><a href="{RSS}" title="{lang:Subscribe}">Feeds</a></li>
+{block:IfShowArchive}<li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>{/block:IfShowArchive}
+{block:IfShowRSS}<li><a href="{RSS}" title="{lang:Subscribe}">Feeds</a></li>{/block:IfShowRSS}
+{block:IfShowTheme}<li><a href="http://bajuz-themes.tumblr.com" title="Theme">theme</a></li>{block:IfShowTheme}
 
-<li><a href="http://bajuz-themes.tumblr.com" title="Theme">theme</a></li>
-
-<li><form action="/search" method="get" id="searchform"><input type="{lang:Search}" placeholder="{lang:search}" name="q" value="" results="5" /></form></li>
+{block:IfShowSearch}<li><form action="/search" method="get" id="searchform"><input type="{lang:Search}" placeholder="{lang:search}" name="q" value="" results="5" /></form></li>{/block:IfShowSearch}
 
 </div></div>
 <div class="clear"></div>
