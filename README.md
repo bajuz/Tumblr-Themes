@@ -11,4 +11,5 @@ Bajuz Tumblr Themes keep it clean and transparent so that you can use our themes
 
 If you have any feedback or suggestions, please feel free to contact.
 
-Visit bajuz tumblr themes website : <a href="http://bajuz-themes.com">Bajuz Tumblr Themes</a>
+Check my tumblr themes website : 
+<a href="http://bajuz-themes.tumblr.com">Bajuz Tumblr Themes</a>
