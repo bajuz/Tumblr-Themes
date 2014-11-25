@@ -50,13 +50,6 @@
 <script type="text/javascript" language="javascript" src=
 "http://static.tumblr.com/vaqsgdj/PEZn3ovo4/index-diblah.js"></script>
 {/block:IndexPage}
-{block:PermalinkPage}
-<script type="text/javascript" language="javascript">
-$(document).ready(function(){
-                $('#wrap').fadeIn(3000);
-});    
-</script>
-{/block:PermalinkPage}
 
 <style type="text/css">
 /************************\ DEFAULT /************************/
@@ -74,7 +67,7 @@ input { border: none; width: 100%; padding: 5px; background:{color:Background};}
 /************************\ END DEFAULT /************************/
 
 /************************\ PACKAGE /************************/
-#wrap { margin: 0 auto; display:none;}
+#wrap { margin: 0 auto; -webkit-animation: fade 1s 1 ease-in-out; -moz-animation: fade 1s 1 ease-in-out;-o-animation: fade 1s 1 ease-in-out;}
 #content { margin: 0 auto;}
 #menu { z-index: 999; max-width: 25%; margin:0 ; text-align: center; font-weight: lighter; padding: 2em; position: fixed; left: 0; background: {color:menu}; overflow: hidden; top: 0;}
 #navigator { width: 150px; margin: 10em auto 0; padding: 15px 0; text-align:center;}
@@ -123,7 +116,7 @@ input { border: none; width: 100%; padding: 5px; background:{color:Background};}
 .music img { height: 80%; position: absolute; right: 0; z-index: 2; padding: 15px 25px; background: #000;}
 .box { background-color: #000; z-index:2;}
 .player { height: 150px;}
-
+c
 .permalink { margin-top:10px; text-align: left;}
 
 .ask { float: left; width:100%; padding:0 10px; margin-left: 24px;margin-top: -24px;}}
@@ -228,6 +221,10 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 
 {CustomCSS}
 
+@-webkit-keyframes fade { from{ opacity:0;} to { opacity:1;}}
+@-moz-keyframes fade { from{ opacity:0;} to { opacity:1;} }
+@-o-keyframes fade { from{ opacity:0;} to { opacity:1;} }
+@keyframes fade { from{ opacity:0;} tp{ opacity:1;}}
 @-webkit-keyframes cssAnimation { from { -webkit-transform: translate(-100%); } to { -webkit-transform: translate(0); } }
 @-moz-keyframes cssAnimation { from { -moz-transform: translate(-100%); }
 to { -moz-transform: translate(0); } }
@@ -380,7 +377,7 @@ to { -moz-transform: translate(0); } }
 {/block:IndexPage}  
     <a href="#" id="scroll-top"><i class="social-up"></i></a>
     <div class="credit">
-        Copyright &copy; 2013 {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Diblah Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a>
+        Copyright &copy; {CopyrightYears} {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Diblah Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a>
     </div>
 </div>  
     
