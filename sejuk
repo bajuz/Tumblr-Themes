@@ -10,8 +10,6 @@
 <link rel="shortcut icon" href="{Favicon}">
 <meta name="font:Page font" content="Arial"/>
 <meta name="font:Description font" content="Arial"/>
-<meta name="color:Background" content="#eee"/>
-<meta name="color:Accent" content="#000"/>
 <meta name="color:Post" content="#fff"/>
 <meta name="image:Logo" content="">
 <meta name="image:Background" content="">
@@ -81,7 +79,7 @@ blockquote { border-left: 2px solid {color:text};}
 .menu-open .navigation{background:{AccentColor}; color:{Titlecolor};}
 .links ul li a { background:{Accentcolor}; color:{Titlecolor}; border:7px solid {Accentcolor};}
 .links ul li a:hover { background: {Titlecolor}; color:{Accentcolor};}
-.search input { background:{color:Link}; color:{Accentcolor}; border:7px double {color:Link};}
+.search input { background:{Accentcolor}; color:{Titlecolor}; border:7px solid {Accentcolor};} ::-webkit-input-placeholder { color:{Titlecolor};} :-moz-placeholder {  color:{Titlecolor}; opacity: 1; } ::-moz-placeholder { color:{Titlecolor}; opacity: 1;} :-ms-input-placeholder { color:{Titlecolor};}
 .post { background: {color:Post};Color:{color:text Post};}
 .post a {Color:{color:link post}; font-weight: 900;}
 #infscr-loading { background: {AccentColor};}
@@ -94,7 +92,7 @@ blockquote { border-left: 2px solid {color:text};}
 {block:IfPhotoHover}
 .hover { background:{block:IfInvertphotohovericons}white{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}black{/block:IfNotInvertphotohovericons};}
 .dtl a { color: {block:IfInvertphotohovericons}black{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}white{/block:IfNotInvertphotohovericons};
-{block:IfPhotoHover}
+{/block:IfPhotoHover}
 {/block:IndexPage}
 
 {block:PermalinkPage}
@@ -270,9 +268,9 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
                       {/block:IfPhotoHover}
                       <div class="imgset">{block:Photos}
                         <li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>
-                        {/block:Photos}</div>{/block:IndexPage}
+                        {/block:Photos}</div>{block:IfPhotoHover}</div>{/block:IfPhotoHover}{/block:IndexPage}
                       {block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>
-                      {Photoset-700}{/block:PermalinkPage} </div>
+                      {Photoset-700}{/block:PermalinkPage}
                     {/block:Photoset} 
                     
                     {block:Audio}
@@ -288,7 +286,7 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
                     {/block:Caption}{/block:IfShowcaptions}{/block:IndexPage}
                     
                     {block:IndexPage}
-                    <div class="permalink{block:Photo} no-icon{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photo}{block:Photoset} pad{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photoset}">
+                    <div class="permalink{block:Photo} no-icon{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photo}{block:Photoset} no-icon{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photoset}">
                       <div class="gap">
                         <div class="icon">{block:IfPosticonswhite}{LikeButton color="white" size="15"}{/block:IfPosticonswhite}{block:IfNotPosticonswhite}{LikeButton color="black" size="15"}{/block:IfNotPosticonswhite}</div>
                         <div class="icon">{block:IfPosticonswhite}{ReblogButton color="white" size="15"}{/block:IfPosticonswhite}{block:IfNotPosticonswhite}{ReblogButton color="black" size="15"}{/block:IfNotPosticonswhite}</div>
