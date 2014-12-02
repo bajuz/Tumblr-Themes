@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!-- SEJUK THEME BY WWW.BAJUZ.US -->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<meta name="font:Page font" content="Arial"/>
+<meta name="font:Description font" content="Arial"/>
+<meta name="color:Background" content="#eee"/>
+<meta name="color:Accent" content="#000"/>
+<meta name="color:Post" content="#fff"/>
+<meta name="image:Logo" content="">
+<meta name="image:Background" content="">
+<meta name="if:Show captions" content="1"/>
+<meta name="if:Photo Hover" content="1"/>
+<meta name="if:Post icons white" content="0"/>
+<meta name="if:Invert photo hover icons" content="1"/>
+<meta name="select:Background style" content="" title="Normal">
+<meta name="select:Background style" content="cover" title="Cover">
+<meta name="select:Background style" content="repeat" title="Repeat">
+<meta name="select:Background style" content="repeat-x" title="Repeat X">
+<meta name="select:Background style" content="repeat-y" title="Repeat Y">
+<meta name="select:Photos hover color" content="" title="Normal">
+<meta name="select:Photos hover color" content="gray" title="Grayscale">
+<meta name="select:Column" content="three" title="Three">
+<meta name="select:Column" content="two" title="Two">
+<meta name="select:Column" content="one" title="One">
+<meta name="color:Text" content="#000"/>
+<meta name="color:Text post" content="#000"/>
+<meta name="color:Link post" content="#000"/>
+<meta name="color:Link" content="#000"/>
+<meta name="color:Link hover" content="#999"/>
+<meta name="TitleFont" content="Arial"/>
+<meta name="TitleColor" content="#fff"/>
+<meta name="text:Page font size" content="13px"/>
+<meta name="text:Google analytics" content=""/>
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+{block:IndexPage}
+<script type="text/javascript" language="javascript" src=
+"http://static.tumblr.com/vaqsgdj/vxznfxl5w/script.js"></script>
+{/block:IndexPage}
+<script>
+$(document).ready(function(){
+$("#tumblr_controls").css("top",$("header").height()+30);
+var e=$("header").offset().top;
+var t=function(){
+var e=$(window).scrollTop();
+if(e>$(".title").height()){
+    $("header").addClass("fix-menu")}
+    else{
+    $("header").removeClass("fix-menu")}
+};
+t();
+});
+</script>
+<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/CzSnfxmpi/style.css">
+
+<style type="text/css">
+/************************\ DEFAULT /************************/
+body { color: {color:text}; font-family: {font:Page font}; font-size: {text:Page font size}; background: {BackgroundColor} url('{image:background}') center; border:20px solid {AccentColor}; }
+a {Color: {color:Link}; }
+a:hover {Color: {color:link hover};}
+blockquote { border-left: 2px solid {color:text};}
+{block:SearchPage}#loader { display:none;}{/block:SearchPage}
+ .credit { border-top: 1px solid {color:Text};}
+.title { background: {AccentColor}; color: {TitleColor};}
+
+.title h1 { font-family: {TitleFont}; Color: {TitleColor}; font-weight: {TitleFontWeight};}
+.title h1:hover{color: {TitleColor};}
+.desc{ font-family:{font:Description font};}
+.navigation button:hover,.menu-open .navigation button { background: {Titlecolor}; color:{AccentColor};}
+.menu-open .navigation button:hover { background: {AccentColor}; color:{Titlecolor};}
+.navigation button{ background:{AccentColor}; color:{Titlecolor};}
+.menu-open .navigation{background:{AccentColor}; color:{Titlecolor};}
+.links ul li a { background:{Accentcolor}; color:{Titlecolor}; border:7px solid {Accentcolor};}
+.links ul li a:hover { background: {Titlecolor}; color:{Accentcolor};}
+.search input { background:{color:Link}; color:{Accentcolor}; border:7px double {color:Link};}
+.post { background: {color:Post};Color:{color:text Post};}
+.post a {Color:{color:link post}; font-weight: 900;}
+#infscr-loading { background: {AccentColor};}
+#load { background:{BackgroundColor};}
+
+{block:IndexPage}
+/************************\ INDEX PAGE /************************/
+.caption blockquote { border-left: 2px solid {color:text Post};}
+.perma a {Color:{block:IfPosticonswhite}white{/block:IfPosticonswhite}{block:IfNotPosticonswhite}black{/block:IfNotPosticonswhite}!important;}
+{block:IfPhotoHover}
+.hover { background:{block:IfInvertphotohovericons}white{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}black{/block:IfNotInvertphotohovericons};}
+.dtl a { color: {block:IfInvertphotohovericons}black{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}white{/block:IfNotInvertphotohovericons};
+{block:IfPhotoHover}
+{/block:IndexPage}
+
+{block:PermalinkPage}
+/************************\ PERMALINK PAGE /************************/
+@media only screen and (min-width: 1000px){ #content {padding:0 3em;} }
+.post { display:block; max-width:700px; margin: 20px auto 0;}
+.photo { text-align: center;}
+.video iframe, .video embbed {max-width: 100%!important;}
+#notes { max-width: 700px; margin: 0 auto;}
+.text { padding: 20px; max-width: 680px;}
+.ask { width:90%!important;}
+.meta { padding-top:10px; margin: 0 auto; width: 700px;}
+
+.caption{ margin: 0 auto; max-width: 700px;}
+ol.notes::-webkit-scrollbar{display:none;}
+ol.notes{padding: 0 20px 0 0;margin 0px 0px;list-style-type:none;font-size:11 px; max-height: 190px; overflow-y: auto;}
+ol.notes li.note{border-top:1px dotted {color:font};padding:0px;font-size:11px;}
+ol.notes li.note img{padding:0; display:inline-block;}
+ol.notes li.note img.avatar{vertical-align:-15px;margin-right:5px;width:16px;height:16px;}
+ol.notes li.note a img.avatar{padding: 10px;border-width:0;border:none;}
+ol.notes li.note img{padding:0;border-width:0;border:none;}
+ol.notes li.note span.action{font-weight:bold;}
+ol.notes li.note.answer_content{font-weight:normal;}
+ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}
+ol.notes li.note.blockquote a{text-decoration:none;}
+.permalink-page { text-align:center;}
+.permalink-page a { display: inline-block; text-align: center; padding: 7px; width: 130px; border: 1px solid; margin: 12px 4px; font-size: 12px; font-weight: 900; text-transform: uppercase;}
+/************************\ END PERMALINK PAGE /************************/
+{/block:PermalinkPage}
+
+#scroll-top { background:{AccentColor}; color:{Titlecolor};}
+
+{CustomCSS}
+
+/************************\ RESPONSIVE STYLE /************************/
+@media only screen and (max-width: 850px){ #foot {position:relative; max-width:330px;} #menu { margin-left: -8%; bottom: 10px; left: auto;} body { position:relative; left:0; -webkit-transition: left .7s ease-in-out; -moz-transition: left .7s ease-in-out; -o-transition: left .7s ease-in-out; transition: left .7s ease-in-out; } .menu-open {position:relative; left: 50%; -webkit-transition: left .7s ease-in-out; -moz-transition: left .7s ease-in-out; -o-transition: left .7s ease-in-out; transition: left .7s ease-in-out;} .nav { width: 0; top:0; left: 0!important; position: fixed;} .menu-open .nav {background: {Accentcolor}; visibility: visible; width: 50%;} .links ul li a ,.search { display: block;} #content {margin: 0;} .post{width:100%!important;; margin:10px 0;} .text {padding:2em 2em 4em;}.photo,.photo img {width:100%!important;}}
+@media only screen and (min-width: 860px) { #content {margin-left: 0%;} #menu { position:fixed!important; max-width: 100%!important;} .links { left: -50%; right: -50%; } .search input:active,.search input:focus { width: 100%; position: fixed;} .fix-menu .search input:active,.fix-menu .search input:focus {top:0;}}
+@media only screen { button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer;}}
+
+/************************\ END RESPONSIVE STYLE /************************/
+
+</style>
+
+</head>
+<body class="{select:Background style}">
+<div id="wrap">
+  <header>
+    <div class="title"> {block:IfLogoImage}<a title="{Title}" href="/"><img src="{Image:logo}"></a>{/block:IfLogoImage}{block:IfNotLogoImage}<a title="{Title}" href="/">
+      <h1>{Title}</h1>
+      </a>{/block:IfNotLogoImage}
+      
+      {block:ShowDescription}
+      <div class="desc">{Description}</div>
+      {/block:ShowDescription} </div>
+    <div id="menu">
+      <script type="text/javascript" language="javascript">
+$(function(){ 
+    
+$nav=$(".navigation");
+$add=$("body");
+$bg=$(".navigation .overlay");
+$navButton=$nav.find("button");
+$navButton.on("click",function(){$add.toggleClass("menu-open");});
+}); 
+
+</script>
+      <div class="navigation">
+        <div class="overlay"></div>
+        <button><span><i class="icon-open"></i></span><i class="arrow"></i></button>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="links">
+        <ul>
+          <li>
+            <div class="search">
+              <form id="searchform" action="/search" method="get">
+                <input id="sbmt" type="submit" value="search">
+                <input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}">
+              </form>
+            </div>
+          </li>
+          {block:AskEnabled}
+          <li><a title="Contact" href="/ask">contact</a></li>
+          {/block:AskEnabled}
+          
+          {block:SubmissionsEnabled}
+          <li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>
+          {/block:SubmissionsEnabled}
+          
+          {block:HasPages}{block:Pages}
+          <li><a title="{Label}" href="{URL}">{Label}</a></li>
+          {/block:Pages}{/block:HasPages}
+          <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
+          <li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div id="content"> {block:Posts}
+    <div class="post{block:indexpage} {select:Column}{/block:indexpage}{block:Photo} photo{/block:Photo}{block:Photoset} photo{/block:Photoset}" id="{Postid}">{block:Text}<div class="text">{/block:Text}{block:Link}<div class="text">{/block:Link}{block:Quote}<div class="text">{/block:Quote}{block:Chat}<div class="text">{/block:Chat}{block:Answer}<div class="text">{/block:Answer}{block:Video}<div class="text">{/block:Video}{block:Audio}<div class="text">{/block:Audio}
+                    
+                    {block:Text}
+                    {block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}
+                    <div class="description">{Body}</div>
+                    {/block:Text}
+                    
+                    {block:Link} <a href="{URL}" class="link" {Target}>{Name}</a> {block:Description}
+                    <div class="description">{Description}</div>
+                    {/block:Description}
+                    {/block:Link}
+                    
+                    {block:Quote} <b>"{Quote}"</b> {block:Source}<br>
+                    &mdash; {Source}{/block:Source}
+                    {/block:Quote}
+                    
+                    {block:Photo}
+                    {block:IndexPage}
+                    {block:IfPhotoHover}
+                    <div class="hover">
+                      <div class="dtl">
+                        <div class="info"> <a href="{Permalink}" title="{lang:Permalink}" target="_blank">Details</a> <span><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" title="Share to twitter" class="icon-twit" target="_blank"></a> <a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" title="Share to facebook" class="icon-fb" target="_blank"></a> <a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" title="Share to pinterest" class="icon-pin" target="_blank"></a></span>
+                          <ul>
+                            <li>
+                              <div class="icon">{block:IfInvertphotohovericons}{LikeButton color="black" size="15"}{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}{LikeButton color="white" size="15"}{/block:IfNotInvertphotohovericons}</div>
+                        <div class="icon">{block:IfInvertphotohovericons}{ReblogButton color="black" size="15"}{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}{ReblogButton color="white" size="15"}{/block:IfNotInvertphotohovericons}</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="bg"></div>
+                      {/block:IfPhotoHover} <img class="{select:Photos hover color}" src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfPhotoHover}</div>{/block:IfPhotoHover}
+                    {/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}
+                    {/block:Photo}
+                    
+                    {block:Chat}
+                    {block:Title}
+                    <h2>{Title}</h2>
+                    {/block:Title}
+                    <div class="description">
+                      <ul class="chat">
+                        {block:Lines}
+                        <li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>
+                        {/block:Lines}
+                      </ul>
+                    </div>
+                    {/block:Chat}
+                    
+                    {block:Answer}<img class="asker_img" src="{AskerPortraitURL-24}"/>
+                    <div class="ask"><b>{Asker} asked :</b>
+                      <p>{Question}</p>
+                    </div>
+                    <img class="asker_img" src="{PortraitURL-24}"/>
+                    <div class="ask"><b>{Name} answered :</b>{Answer}</div>
+                    <div class="clear"></div>
+                    {/block:Answer}
+                    
+                    {block:Video}
+                    <div class="video{block:IndexPage} no-pad">{Video-500}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>
+                    {/block:Video}
+                    
+                    {block:Photoset}
+                    {block:IndexPage}
+                    {block:IfPhotoHover}
+                    <div class="hover">
+                      <div class="dtl">
+                        <div class="info"> <a href="{Permalink}" title="{lang:Permalink}" target="_blank">Details</a> <span><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" class="icon-twit" title="Share to twitter" target="_blank"></a> <a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" title="Share to facebook" class="icon-fb" target="_blank"></a></span>
+                          <div class="icon">{block:IfInvertphotohovericons}{LikeButton color="black" size="15"}{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}{LikeButton color="white" size="15"}{/block:IfNotInvertphotohovericons}</div>
+                        <div class="icon">{block:IfInvertphotohovericons}{ReblogButton color="black" size="15"}{/block:IfInvertphotohovericons}{block:IfNotInvertphotohovericons}{ReblogButton color="white" size="15"}{/block:IfNotInvertphotohovericons}</div>
+                        </div>
+                      </div>
+                      <div class="bg"></div>
+                      {/block:IfPhotoHover}
+                      <div class="imgset">{block:Photos}
+                        <li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>
+                        {/block:Photos}</div>{/block:IndexPage}
+                      {block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>
+                      {Photoset-700}{/block:PermalinkPage} </div>
+                    {/block:Photoset} 
+                    
+                    {block:Audio}
+                    <div class="music no-pad">
+                      <div class="box">
+                        <div class="player">{block:AlbumArt}<a href="{Permalink}"><img src="{AlbumArtURL}"></a>{/block:AlbumArt}{AudioPlayerBlack}</div>
+                      </div>
+                    </div>
+                    {/block:Audio}
+                    
+                    {block:IndexPage}{block:IfShowcaptions}{block:Caption}
+                    <div class="{block:Photo}pad {/block:Photo}{block:Photoset}pad {/block:Photoset}caption">{Caption}</div>
+                    {/block:Caption}{/block:IfShowcaptions}{/block:IndexPage}
+                    
+                    {block:IndexPage}
+                    <div class="permalink{block:Photo} no-icon{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photo}{block:Photoset} pad{block:IfPhotoHover} none{/block:IfPhotoHover}{/block:Photoset}">
+                      <div class="gap">
+                        <div class="icon">{block:IfPosticonswhite}{LikeButton color="white" size="15"}{/block:IfPosticonswhite}{block:IfNotPosticonswhite}{LikeButton color="black" size="15"}{/block:IfNotPosticonswhite}</div>
+                        <div class="icon">{block:IfPosticonswhite}{ReblogButton color="white" size="15"}{/block:IfPosticonswhite}{block:IfNotPosticonswhite}{ReblogButton color="black" size="15"}{/block:IfNotPosticonswhite}</div>
+                        <div class="perma"><a title="{lang:Permalink}" href="{Permalink}" target="_blank">Details</a><span><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" class="icon-twit" title="Share to twitter" target="_blank"></a>&nbsp;<a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" title="Share to facebook" class="icon-fb" target="_blank"></a>{block:Photo}&nbsp;<a href="https://pinterest.com/pin/create/button/?url={PhotoURL-500}&media={PhotoURL-500}&description={description}" title="Share to pinterest" class="icon-pin" target="_blank"></a>{/block:Photo}</span><br style="clear: both;">
+                        </div>
+                      </div>
+                    </div>
+                    {/block:IndexPage} </div>
+                  {block:Text}</div>{/block:Text}{block:Link}</div>{/block:Link}{block:Quote}</div>{/block:Quote}{block:Chat}</div>{/block:Chat}{block:Answer}</div>{/block:Answer}{block:Video}</div>{/block:Video}{block:Audio}</div>{/block:Audio}
+    
+    {block:PermalinkPage}{block:Caption}
+    <div class="caption">{Caption}</div>
+    {/block:Caption}{block:Date}
+    <div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>
+      {block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div>
+    <div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>
+    {/block:Date}{/block:PermalinkPage}
+    
+    {/block:Posts}
+    
+    {block:ContentSource}
+    <!— {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+    {/block:SourceLogo}
+    {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
+    {/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+    <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+    {block:Pagination}
+    <div class="pagination" id="pagination" style="display:none;">{block:NextPage}
+      <li><a class="next" href="{NextPage}">»</a></li>
+      {/block:NextPage}</div>
+    {/block:Pagination}
+    <div class="clear"></div>
+  </div>
+  <div id="foot"> {block:IndexPage}
+    <div id="loader"> <a id="load">Load More</a> </div>
+    {/block:IndexPage}
+    {block:PermalinkPage}{block:PermalinkPagination}
+    <div class="permalink-page"> {block:PreviousPost} <a href="{PreviousPost}">Previous Post</a> {/block:PreviousPost}
+      
+      {block:NextPost} <a href="{NextPost}">Next Post</a> {/block:NextPost} </div>
+    {/block:PermalinkPagination}{/block:PermalinkPage} <a href="#" id="scroll-top"><span class="icon-go-up"></a>
+    <div class="credit"> Copyright &copy; {CopyrightYears} {Title} <br>
+      Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Diblah Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a> </div>
+  </div>
+</div>
+{block:IfGoogleanalytics}
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google analytics}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+{/block:IfGoogleanalytics}
+</body>
+</html>
