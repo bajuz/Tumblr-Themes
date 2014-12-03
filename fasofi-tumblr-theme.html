@@ -4,20 +4,7 @@
 <!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
 <!--[if IE 9]><html class="lt-ie10"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
-<!-- PLEASE DON'T REMOVE THIS CREDIT
- 
-  /$$$$$$$    /$$$$$$      /$$$$$  /$$   /$$   /$$$$$$  
- | $$__  $$  /$$__  $$    |__  $$ | $$  | $$  /$$__  $$
- | $$  \ $$ | $$  \ $$       | $$ | $$  | $$ | $$  \__/
- | $$$$$$$  | $$$$$$$$       | $$ | $$  | $$ |  $$$$$$  
- | $$__  $$ | $$__  $$  /$$  | $$ | $$  | $$  \____  $$
- | $$  \ $$ | $$  | $$ | $$  | $$ | $$  | $$  /$$  \ $$
- | $$$$$$$/ | $$  | $$ |  $$$$$$/ |  $$$$$$/ |  $$$$$$/
- |_______/  |__/  |__/  \______/   \______/   \______/  
- 
- FASIFO FREE PREMIUM TUMBLR THEME by bajuz themes - www.bajuz-themes.com
- 
--->  
+<!--  FASOFI TUMBLR THEME by www.bajuz-themes.tumblr.com -->  
     <head>
 
         <title>{Title}</title>
@@ -41,78 +28,8 @@
 {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
-
-<script>
-$(document).ready(function(){ $("#links [title]").style_my_tooltips({ tip_follows_cursor:true, tip_delay_time:90, tip_fade_speed:600, attribute:"title" }); })(jQuery);
-</script>
-
-{block:IndexPage}<script type="text/javascript" language="javascript" src=
-"http://static.tumblr.com/vaqsgdj/JKimt7g3g/infinitexmason.js"></script>
-<script type="text/javascript" language="javascript">
-$(document).ready(function(){
-    function e(){ var e=4; }
-    function t(){ setTimeout(2e3)}
-    $("#content .post").each(function(){e()});
-    $("#content").imagesLoaded(function(){
-        $("#content").masonry({
-            itemSelector:".post",
-            isAnimated: false,
-            columnWidth:330,
-            hiddenStyle:{opacity:0},
-            visibleStyle:{opacity:1}
-        })
-    });
-    $("#content").infinitescroll({
-        navSelector:".pagination",
-        nextSelector:".pagination a.next",
-        itemSelector:"#content .post",
-        bufferPx:100,
-        loading:{
-            img:"http://static.tumblr.com/vaqsgdj/s5Pmgyueb/loading_ani.gif",
-            msgText:"LOADING",
-            finishedMsg:"NO MORE POSTS"},
-            errorCallback:
-                function(){
-                    $("#infscr-loading").fadeOut();
-                    $("#load").show();
-                    $("#load").html("No more posts").animate({opacity:0.8},500).fadeOut("normal") }},
-                function(n,r){var i=$(n).css({opacity:0});
-                i.imagesLoaded(
-                    function(){i.animate({opacity:1});
-                    $("#content").masonry("appended",i,!0)});
-                    e();
-                    t();
-                    var s=r.state.currPage;
-                    Tumblr.LikeButton.get_status_by_page(s);
-                });
-                if($("#load").length>0){
-                    $(window).unbind(".infscr");
-                    $("#load").click(
-                        function(){$("#content").infinitescroll("retrieve")
-                        })
-                }
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 50) {
-                        $('#scroll-top').fadeIn(800);
-                        } else {
-                            $('#scroll-top').fadeOut(800);
-                        }
-                });
-                $("#scroll-top").click(function(){
-                    $("body,html").animate(
-                        {scrollTop:0},
-                        800,
-                        "easeInOutQuint"
-                        );
-                        return!1
-                });
-});    
-</script>
-{/block:IndexPage}
-
-{/block:IndexPage}
+{block:PermalinkPage}<script src="http://static.tumblr.com/vaqsgdj/Ctjnfzih5/script.js"/></script>{/block:PermalinkPage}
+{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/C8Snfziic/script.js"/></script>{/block:IndexPage}
 
 <style type="text/css">
 /************************\ DEFAULT /************************/
@@ -196,8 +113,7 @@ input { border: none; width: 100%; padding: 5px; background:{color:Background};}
 
 #load:hover{ color: {color:Title}; text-shadow: 1px 0px 0 transparent, -1px 0px 0 transparent, 0px -1px 0 transparent, 0px 1px 0 transparent, 1px -1px 0 transparent, -1px 1px 0 transparent, 1px 1px 0 transparent, -1px -1px 0 transparent;}
 
-{block:IndexPage}
-/************************\ INDEX PAGE /************************/
+{block:IndexPage}/************************\ INDEX PAGE /************************/
 .post { float: left; width: 250px; display: inline-block; margin: 15px; padding: 25px; }
 
 .pad { padding: 10px 25px 25px !important;}
@@ -222,8 +138,7 @@ background: #555; color: #fff; font-style: normal; text-transform: uppercase; op
 .icon, .perma { cursor: pointer; opacity:.5; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .icon:hover, .perma:hover { opacity:1;}
 
-{block:IfPhotoIcons}
-.photo {padding:0!important; width:300px!important;}
+{block:IfPhotoIcons}.photo {padding:0!important; width:300px!important;}
 .hover {position:relative; text-align:center;}
 
 .bg,.ico {-webkit-transition: all .6s ease-in-out; -moz-transition: all .6s ease-in-out; -o-transition: all .6s ease-in-out; transition: all .6s ease-in-out;}
@@ -266,11 +181,9 @@ background: #555; color: #fff; font-style: normal; text-transform: uppercase; op
 .hover:hover .ico .r {-webkit-animation: r  1s; -moz-animation: r 1s; -ms-animation: r 1s;}
 .hover:hover .bg {opacity:.5; visibility:visible;}{/block:IfPhotoIcons}
 
-/************************\ END INDEX PAGE /************************/
-{block:IndexPage}
+/************************\ END INDEX PAGE /************************/{block:IndexPage}
 
-{block:PermalinkPage}
-/************************\ PERMALINK PAGE /************************/
+{block:PermalinkPage}/************************\ PERMALINK PAGE /************************/
 .side { max-width:750px;}
 .post { display:block; max-width:700px; margin: 20px auto 0;}
 .photo { text-align: center;}
@@ -291,8 +204,8 @@ ol.notes li.note span.action{font-weight:bold;}
 ol.notes li.note.answer_content{font-weight:normal;}
 ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}
 ol.notes li.note.blockquote a{text-decoration:none;}
-/************************\ END PERMALINK PAGE /************************/
-{/block:PermalinkPage}
+/************************\ END PERMALINK PAGE /************************/{/block:PermalinkPage}
+#scroll-top {display:none;position:fixed;bottom:10px;right:10px;}
 
 {CustomCSS}
 
@@ -304,9 +217,9 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 @media only screen and (max-width: 1000px){ #notes { margin-left: 100px;}}
 /************************\ END RESPONSIVE STYLE /************************/
 
-#scroll-top {display:none;position:fixed;bottom:10px;right:10px;}
-
 </style>
+
+</head>
 
 <body>
 
@@ -414,25 +327,22 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 
 {/block:Posts}
 
-{block:ContentSource}
-<!— {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-{/block:SourceLogo}
-{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
-{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+<!--{block:ContentSource} {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
+{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}-->
 <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
 
 {block:Pagination}<div class="pagination" id="pagination" style="display:none;">{block:NextPage}<li><a class="next" href="{NextPage}">»</a></li>{/block:NextPage}</div>{/block:Pagination}
 <div class="clear"></div>
 </div>    
     
-{block:IndexPage}
-<div id="navigator">
+{block:IndexPage}<div id="navigator">
     <a id="load">Load More</a>
 </div>
 <div id="foot">
     <a href="#" id="scroll-top">Top</a>
     <div class="credit">
-        ©2013 {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a>
+        © {CopyrightYears} {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Fasofi Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Bajuz Theme">bajuz</a>
     </div>
 </div>{/block:IndexPage}    
     
