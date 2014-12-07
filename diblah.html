@@ -8,11 +8,11 @@
 
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
-        <meta name="color:Background" content="#eee"/>
-        <meta name="color:Menu" content="#fff"/>
-        <meta name="color:Post" content="#fff"/>
         <meta name="image:Logo" content="">
         <meta name="image:Background" content="">
+        <meta name="color:Background color" content="#eee"/>
+        <meta name="font:Body" content="Arial"/>
+        <meta name="color:Text color" content="#000"/>
         <meta name="if:Show Captions" content="1"/>
         <meta name="if:Photo Icons" content="1"/>
         <meta name="if:Post Icons White" content="0"/>
@@ -23,26 +23,24 @@
         <meta name="select:Background Style" content="repeat-y" title="Repeat Y">
         <meta name="select:Photos Hover Color" content="" title="Normal">
         <meta name="select:Photos Hover Color" content="gray" title="Grayscale">
-        <meta name="font:Body" content="Arial"/>
-        <meta name="color:Text" content="#000"/>
-        <meta name="color:Text post" content="#000"/>
-        <meta name="color:Link post" content="#000"/>
-        <meta name="color:Link" content="#000"/>
-        <meta name="color:Link hover" content="#999"/>
+        <meta name="color:Post color" content="#fff"/>
+        <meta name="color:Text post Color" content="#000"/>
+        <meta name="color:Link post color" content="#000"/>
+        <meta name="color:Link color" content="#000"/>
+        <meta name="color:Link hover color" content="#999"/>
+        <meta name="color:Menu background color" content="#fff"/>
         <meta name="font:Title" content="Arial"/>
-        <meta name="color:Title" content="#000"/>
         <meta name="font:Description" content="Arial"/>
+        <meta name="color:Menu text color" content="#000"/>
+        <meta name="color:Menu link color" content="#fff"/>
+        <meta name="color:Menu link hover color" content="#000"/>
+        <meta name="color:Menu Accent color" content="#000"/>
         <meta name="text:Font Size" content="13px"/>
         <meta name="text:Google Analytics" content=""/>
 {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/pGJnfq718/social.css">
-<style type="text/css">
-body { color: {color:text}; font-family: {font:Body}; font-size: {text:Font Size}; background: {color:Background} url('{image:background}') center;} a {Color: {color:Link};} a:hover {Color: {color:link hover};}
-blockquote { border-left: 2px solid {color:text};} input { background:{color:Background};} #menu { background: {color:menu};} .title h1{ font-family: {font:Title}; Color: {color:Title};} .title h1:hover{color: {color:Title};} .desc{ font-family:{font:Description};} .links ul li a { background:{color:Link}; color:{color:menu}; border:7px double {color:Link};} .links ul li a:hover { color:{color:Link};} .search input { background:{color:Link}; color:{color:menu}; border:7px double {color:Link};} .post { background: {color:Post};Color:{color:text Post};} .post a {Color:{color:link post};} #load { Color: {TitleColor}; } #load:hover{Color: {TitleColor};} {block:IndexPage} .caption blockquote { border-left: 2px solid {color:text Post};} .perma a {Color:{block:IfPostIconsWhite}white{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}black{/block:IfNotPostIconsWhite}!important;} {/block:IndexPage}
-#scroll-top { background:{color:Link}; color:{color:menu};}
-
-{CustomCSS}
+<style type="text/css">body { color: {color:text color}; font-family: {font:Body}; font-size: {text:Font Size}; background: {color:Background color} url('{image:background}') center;} a {Color: {color:Link color};} a:hover {Color: {color:link hover color};} blockquote { border-left: 2px solid {color:text color};} input { background:{color:Background color};} #menu { background: {color:Menu background color}; color:{color:Menu text color};} #menu .desc a {color:{color:Menu text color};} .title h1, .title h1 a{ font-family: {font:Title}; Color: {TitleColor};} .title h1:hover{color: {TitleColor};} .desc{ font-family:{font:Description};} .links ul li a,.search input{ background:{color:Menu accent color}; color:{color:Menu Link color}; border:7px double {color:Menu accent color};} .links ul li a:hover { color:{color:Menu link hover color}; border:7px double {color:Menu link hover color};} .post { background: {color:Post color};Color:{color:Text post color};} .post a {Color:{color:Link post color};}
 </style>
 {block:PermalinkPage}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/deVnfoxzg/diblah-style.css">
 <style type="text/css">
@@ -59,7 +57,7 @@ blockquote { border-left: 2px solid {color:text};} input { background:{color:Bac
 .caption{ margin: 0 auto; max-width: 700px;}
 ol.notes::-webkit-scrollbar{display:none;}
 ol.notes{padding: 0 20px 0 0;margin 0px 0px;list-style-type:none;font-size:11 px; max-height: 190px; overflow-y: auto;}
-ol.notes li.note{border-top:1px dotted {color:font};padding:0px;font-size:11px;}
+ol.notes li.note{padding:0px;font-size:11px;}
 ol.notes li.note img{padding:0;}
 ol.notes li.note img.avatar{vertical-align:-15px;margin-right:5px;width:16px;height:16px;}
 ol.notes li.note a img.avatar{padding: 10px;border-width:0;border:none;}
@@ -72,16 +70,19 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 .permalink-page a { display: inline-block; text-align: center; padding: 7px; width: 130px; margin: 12px 4px; font-size: 12px; font-weight: 900; text-transform: uppercase;}
 /************************\ END PERMALINK PAGE /************************/
 </style>{/block:PermalinkPage}
-
-{block:IndexPage}
 {block:IfNotPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/vcznfq6bx/diblah-idx-style.css">{/block:IfNotPhotoIcons}
 {block:IfPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/tx3nfq6c2/diblah-idx-hover-style.css">{/block:IfPhotoIcons}
+<style type="text/css">#load { Color: {TitleColor}; } #load:hover{Color: {Link color};} {block:IndexPage} .caption blockquote { border-left: 2px solid {color:text Post};} .perma a {Color:{block:IfPostIconsWhite}white{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}black{/block:IfNotPostIconsWhite}!important;} {/block:IndexPage} #scroll-top { background:{color:Menu link color}; color:{color:Menu background color};}
+{CustomCSS}
+</style>
+
+{block:IndexPage}
 <script type="text/javascript" language="javascript" src=
 "http://static.tumblr.com/vaqsgdj/JKimt7g3g/infinitexmason.js"></script>
 <script type="text/javascript" language="javascript" src=
 "http://static.tumblr.com/vaqsgdj/PEZn3ovo4/index-diblah.js"></script>
 {/block:IndexPage}
-
+</head>
 <body class="{select:Background Style}">
 
 <div id="wrap">
@@ -177,7 +178,7 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 </div>
 </div>
 <div class="bg"></div>{/block:IfPhotoIcons}
-<a href="{Permalink}" data-description="{PhotoAlt}" title="{lang:Permalink}"><div class="imgset">{block:Photos}<li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>{/block:Photos}</div></a></div>
+<a href="{Permalink}" data-description="{PhotoAlt}" title="{lang:Permalink}"><div class="imgset">{block:Photos}<li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>{/block:Photos}</div></a>{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
 {/block:IndexPage}
 {block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>
 {Photoset-700}{/block:PermalinkPage}
