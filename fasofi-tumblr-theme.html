@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
-<!--  FASOFI TUMBLR THEME by www.bajuz-themes.tumblr.com -->  
+<!DOCTYPE html/>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"/> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"/> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"/> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"/> <!--<![endif]-->
+<!--  FASOFI TUMBLR THEME by www.bajuz-themes.tumblr.com -->
     <head>
-
-        <title>{Title}</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>{Title}{block:PermalinkPage}{block:PostSummary}| {PlaintextPostSummary}{/block:PostSummary}{/block:PermalinkPage}
+        {block:SearchPage}| {lang:Search results for SearchQuery}{/block:SearchPage}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon" href="{PortraitURL-128}">
         <meta name="color:Background" content="#ffffff"/>
         <meta name="color:Post" content="#eeeeee"/>
         <meta name="color:Links" content="#000"/>
@@ -21,15 +24,14 @@
         <meta name="image:Logo" content="">
         <meta name="if:Show Captions" content="1"/>
         <meta name="if:Photo Icons" content="1"/>
+        <meta name="if:Infinite Scrolling" content="0">
         <meta name="font:Body" content="Arial"/>
         <meta name="text:Font Size" content="13px"/>
         <meta name="text:Google Analytics" content=""/>
-
-{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-
+        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+        {block:PermalinkPage}{block:Posts}{block:Date}<link rel="canonical" href="{Permalink}"><link rel="shortlink" href="{ShortURL}">{/block:Date}{/block:Posts}{/block:PermalinkPage}
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-{block:PermalinkPage}<script src="http://static.tumblr.com/vaqsgdj/Ctjnfzih5/script.js"/></script>{/block:PermalinkPage}
-{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/C8Snfziic/script.js"/></script>{/block:IndexPage}
+{block:PermalinkPage}<script src="http://static.tumblr.com/vaqsgdj/Ctjnfzih5/script.js"/></script>{/block:PermalinkPage}{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/rGanivgaz/script.js"/></script>{/block:IndexPage}
 
 <style type="text/css">
 /************************\ DEFAULT /************************/
@@ -135,6 +137,7 @@ background: #555; color: #fff; font-style: normal; text-transform: uppercase; op
 
 .perma span:after { content: ''; position: absolute; border: 5px solid transparent; border-right-color: #444; top: 5.5px; left: -10px;}
 
+img {display:block;}
 .icon, .perma { cursor: pointer; opacity:.5; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .icon:hover, .perma:hover { opacity:1;}
 
@@ -206,6 +209,7 @@ ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}
 ol.notes li.note.blockquote a{text-decoration:none;}
 /************************\ END PERMALINK PAGE /************************/{/block:PermalinkPage}
 #scroll-top {display:none;position:fixed;bottom:10px;right:10px;}
+.clearfix:before,.clearfix:after {content: " ";display: table;}.clearfix:after {clear: both;}.clearfix {*zoom: 1;}.hide{display:none;}
 
 {CustomCSS}
 
@@ -216,140 +220,65 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 @media only screen and (min-width: 1024px){ #wrap { max-width: 1035px;} #content{margin-left: 8px;}}
 @media only screen and (max-width: 1000px){ #notes { margin-left: 100px;}}
 /************************\ END RESPONSIVE STYLE /************************/
-
 </style>
-
 </head>
-
 <body>
-
 <div id="wrap">
-
 <div class="side">
-
 <div class="links">
 {block:IfLogoImage}<a title="{Title}" href="/"><img src="{Image:Logo}"></a>{/block:IfLogoImage}{block:IfNotLogoImage}<div class="title"><a title="{Title}" href="/">{Title}</a></div>{/block:IfNotLogoImage}
-
 {block:description}<div class="desc">{description}</div>{/block:description}
-
 <div id="links">
-<ul>
-<li><a title="Refresh" href="/">Home</a></li>
+<ul><li><a title="Refresh" href="/">Home</a></li>
 {block:AskEnabled}<li><a title="Contact" href="/ask">contact</a></li>{/block:AskEnabled}
-
 {block:SubmissionsEnabled}<li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
-
 {block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-
 <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
 <li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
-
 <li><div class="search"><form id="searchform" action="/search" method="get"><input id="sbmt" type="submit" value="search"><input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}"></form></div></li>
 </ul>
-</div>
-<div class="clear"></div>
-</div>
-
-</div>
-
-<div id="content">
-
-{block:Posts}
-<div class="post{block:Photo} photo{/block:Photo}{block:Text} text{/block:Text}{block:Link} text{/block:Link}{block:Quote} text{/block:Quote}{block:Chat} text{/block:Chat}{block:Answer} text{/block:Answer}" id="{Postid}">
-
-{block:Text}
-{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}
-{Body}
-{/block:Text}
-
-{block:Link}
-<a href="{URL}" class="link" {Target}>{Name}</a>
-{block:Description}<div class="description">{Description}</div>{/block:Description}
-{/block:Link}
-
-{block:Quote}
-<b>"{Quote}"</b>
-{block:Source}<br>&mdash; {Source}{/block:Source}
-{/block:Quote}
-
-{block:Photo}
-{block:IndexPage}
-{block:IfPhotoIcons}<div class="hover">
+</div><div class="clear"></div></div></div>
+<div id="content" class="clearfix">
+{block:Posts}<div class="post{block:Photo} photo{/block:Photo}{block:Text} text{/block:Text}{block:Link} text{/block:Link}{block:Quote} text{/block:Quote}{block:Chat} text{/block:Chat}{block:Answer} text{/block:Answer}" id="{Postid}">
+{block:Text}{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}{Body}{/block:Text}
+{block:Link}<a href="{URL}" class="link" {Target}>{Name}</a>{block:Description}<div class="description">{Description}</div>{/block:Description}{/block:Link}
+{block:Quote}<b>"{Quote}"</b>{block:Source}<br>&mdash; {Source}{/block:Source}{/block:Quote}
+{block:Photo}{block:IndexPage}{block:IfPhotoIcons}<div class="hover">
 <div class="ico">
-    <div class="r"></div>
-    <div class="l"></div>
-    <div class="like">{LikeButton color="white" size="25"}</div>
-    <div class="rblg">{ReblogButton color="white" size="25"}</div>
-    <a class="info" href="{Permalink}" title="{lang:Permalink}">
-        <img title="{lang:Permalink}" alt="{lang:Permalink}" src="http://static.tumblr.com/vaqsgdj/c26mtj2bi/info.png">
-    </a>
-    <a class="zoom" href="http://{name}.tumblr.com/image/{postid}" title="{lang:Zoom}">
-        <img title="{lang:Zoom}" alt="{lang:Zoom}" src="http://static.tumblr.com/vaqsgdj/xdXmtj2wq/zoom.png">
-    </a>
+    <div class="r"></div><div class="l"></div><div class="like">{LikeButton color="white" size="25"}</div><div class="rblg">{ReblogButton color="white" size="25"}</div>
+    <a class="info" href="{Permalink}" title="{lang:Permalink}"> <img title="{lang:Permalink}" alt="{lang:Permalink}" src="http://static.tumblr.com/vaqsgdj/c26mtj2bi/info.png"></a>
+    <a class="zoom" href="http://{name}.tumblr.com/image/{postid}" title="{lang:Zoom}"><img title="{lang:Zoom}" alt="{lang:Zoom}" src="http://static.tumblr.com/vaqsgdj/xdXmtj2wq/zoom.png"></a>
 </div>
-<div class="bg"></div>{/block:IfPhotoIcons}
-<img src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
-{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}
-{/block:Photo}
-
-{block:Chat}
-{block:Title}<h2>{Title}</h2>{/block:Title}
-<ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ul>
-{/block:Chat}
-
-{block:Answer}
-<img class="asker_img" src="{AskerPortraitURL-24}"/>
+<div class="bg"></div>{/block:IfPhotoIcons}<img class="img" src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
+{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img class="img" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}{/block:Photo}
+{block:Chat}{block:Title}<h2>{Title}</h2>{/block:Title}
+<ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ul>{/block:Chat}
+{block:Answer}<img class="asker_img" src="{AskerPortraitURL-24}"/>
 <div class="ask"><b>{Asker} asked :</b><p>{Question}</p></div>
 <img class="asker_img" src="{PortraitURL-24}"/>
 <div class="ask"><b>{Name} answered :</b>{Answer}</div>
-<div class="clear"></div>
-{/block:Answer}
-
-{block:Video}
-<div class="video{block:IndexPage} no-pad">{Video-250}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>
-{/block:Video}
-
-{block:Photoset}
-{block:IndexPage}{Photoset-250}{/block:IndexPage}{block:PermalinkPage}{Photoset-700}{/block:PermalinkPage}
-{/block:Photoset} 
-
+<div class="clear"></div>{/block:Answer}
+{block:Video}<div class="video{block:IndexPage} no-pad">{Video-250}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>{/block:Video}
+{block:Photoset}{Photoset}{/block:Photoset} 
 {block:Audio}<div class="music">{block:AlbumArt}<a href="{Permalink}"><img class="no-pad" src="{AlbumArtURL}"></a>{/block:AlbumArt}
-<div class="box"><div class="player">{AudioPlayerBlack}</div></div></div>
-{/block:Audio}
-
+<div class="box"><div class="player">{AudioPlayerBlack}</div></div></div>{/block:Audio}
 {block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}{/block:IndexPage}
-
 {block:IndexPage}<div class="permalink{block:Photo}{block:IfPhotoIcons} none{/block:IfPhotoIcons}{/block:Photo}"><hr><div class="icon">{LikeButton color="black" size="15"}</div><div class="icon">{ReblogButton color="black" size="15"}</div><div class="perma"><a title="{lang:Permalink}" href="{Permalink}">{lang:Permalink}</a><span>{NoteCountWithLabel}</span></div></div>{/block:IndexPage}
-
 </div>
-
 {block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}
-
 {/block:Posts}
-
 <!--{block:ContentSource} {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {/block:SourceLogo}{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
-{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}-->
-<div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
-
-{block:Pagination}<div class="pagination" id="pagination" style="display:none;">{block:NextPage}<li><a class="next" href="{NextPage}">»</a></li>{/block:NextPage}</div>{/block:Pagination}
-<div class="clear"></div>
-</div>    
-    
-{block:IndexPage}<div id="navigator">
-    <a id="load">Load More</a>
-</div>
-<div id="foot">
+{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}-->{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+{block:Pagination}<div class="pagination hide" id="pagination">{block:NextPage}<a class="next" href="{NextPage}">next</a>{/block:NextPage}</div>{/block:Pagination}
+</div>{block:IndexPage}<div id="navigator" class="{block:IfInfiniteScrolling}hide{/block:IfInfiniteScrolling}{block:IfNotInfiniteScrolling}load-more{/block:IfNotInfiniteScrolling}"><a id="load">Load More</a></div>
+<div id="foot" class="clearfix">
     <a href="#" id="scroll-top">Top</a>
-    <div class="credit">
-        © {CopyrightYears} {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Fasofi Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Bajuz Theme">bajuz</a>
+    <div class="credit">© {CopyrightYears} {Title} <br> Powered by <a href="http//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Fasofi Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Bajuz Theme">bajuz</a>
     </div>
 </div>{/block:IndexPage}    
-    
 </div>
-
-{block:IfGoogleAnalytics}
-    <script type="text/javascript">
+{block:IfGoogleAnalytics}<script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '{text:Google Analytics}']);
       _gaq.push(['_trackPageview']);
@@ -358,8 +287,5 @@ ol.notes li.note.blockquote a{text-decoration:none;}
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
-{/block:IfGoogleAnalytics}
-
-</body>
-</html>
+    </script>{/block:IfGoogleAnalytics}
+</body><!-- Fasofi Tmblr thm //bajuz-themes.tumblr.com/ --></html>
