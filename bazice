@@ -19,7 +19,7 @@
     <body><!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
         <div class="header-container">
             <header class="wrapper clearfix">
-                <a href="/" title="{Title}">{block:IfLogoImage}<img src="{image:Logo}" alt="{title}" />{/block:IfLogoImage}{block:IfNotLogoImage}<h1 class="title">{Title}</h1>{/block:IfNotImageLogoImage}</a>
+                <a href="/" title="{Title}">{block:IfLogoImage}<img src="{image:Logo}" alt="{title}" />{/block:IfLogoImage}{block:IfNotLogoImage}<h1 class="title">{Title}</h1>{/block:IfNotLogoImage}</a>
                 <div class="social clearfix">
                     {block:IfEmailAddress}<a href="mailto:{text:Email Address}" class="bjz-mail"></a>{/block:IfEmailAddress}
                     {block:IfGoogleplusURL}<a href="{text:Googleplus URL}" class="bjz-plus"></a>{/block:IfGoogleplusURL}
