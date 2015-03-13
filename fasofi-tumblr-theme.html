@@ -11,7 +11,7 @@
         {block:SearchPage}| {lang:Search results for SearchQuery}{/block:SearchPage}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="shortcut icon" href="{Favicon}">
-        <link rel="apple-touch-icon" href="{PortraitURL-128}">
+        <link rel="apple-touch-icon" href="{PortraitURL-128}">{block:Hidden}
         <meta name="color:Background" content="#ffffff"/>
         <meta name="color:Post" content="#eeeeee"/>
         <meta name="color:Links" content="#000"/>
@@ -28,7 +28,7 @@
         <meta name="font:Body" content="Arial"/>
         <meta name="text:Font Size" content="13px"/>
         <meta name="text:Google Analytics" content=""/>
-        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+        {/block:Hidden}{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
         {block:PermalinkPage}{block:Posts}{block:Date}<link rel="canonical" href="{Permalink}"><link rel="shortlink" href="{ShortURL}">{/block:Date}{/block:Posts}{/block:PermalinkPage}
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 {block:PermalinkPage}<script src="http://static.tumblr.com/vaqsgdj/Ctjnfzih5/script.js"/></script>{/block:PermalinkPage}{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/rGanivgaz/script.js"/></script>{/block:IndexPage}
