@@ -18,7 +18,7 @@
 -->  
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />{block:Hidden}
 
 <!------------------- IF Option ---------------->
 <meta name="if:Infinite Scroll" content="1"/>
@@ -91,7 +91,7 @@
 <meta name="text:Disqus Shortname" content="" />
 <meta name="text:Google Analytics Web Property ID" content=""/>
 
-<title>{Title}</title>
+{/block:Hidden}<title>{Title}</title>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 {block:Description}
