@@ -13,6 +13,9 @@
 <meta name="color:Post" content="#fff"/>
 <meta name="image:Logo" content="">
 <meta name="image:Background" content="">
+<meta name="if:Show Search" content="1"/>
+<meta name="if:Show Archive" content="1"/>
+<meta name="if:Show RSS" content="1"/>
 <meta name="if:Show captions" content="1"/>
 <meta name="if:Photo Hover" content="1"/>
 <meta name="if:Post icons white" content="0"/>
@@ -39,6 +42,7 @@
 {/block:Hidden}{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>{block:IndexPage}
 <script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/vxznfxl5w/script.js"></script>{/block:IndexPage}
+<script>window.jQuery || document.write('<script src="http://static.tumblr.com/wdg4six/C5un4ugjv/jquery-1.11.0.min.js"><\/script>')</script>
 <script>$(function(){$("#tumblr_controls").css("top",$("header").height()+30);var b=($("header").offset().top,function(){var a=$(window).scrollTop();a>$(".title").height()?$("header").addClass("fix-menu"):$("header").removeClass("fix-menu")});b()});</script>
 <link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/CzSnfxmpi/style.css">{block:PermalinkPage}
 <link rel="stylesheet" href="http://static.tumblr.com/wofln30/FGGmyt1xp/colorbox.css">{/block:PermalinkPage}
@@ -126,17 +130,7 @@ ol.notes li.note.blockquote a{text-decoration:none;}
       <div class="desc">{Description}</div>
       {/block:ShowDescription} </div>
     <div id="menu">
-      <script type="text/javascript" language="javascript">
-$(function(){ 
-    
-$nav=$(".navigation");
-$add=$("body");
-$bg=$(".navigation .overlay");
-$navButton=$nav.find("button");
-$navButton.on("click",function(){$add.toggleClass("menu-open");});
-}); 
-
-</script>
+      <script type="text/javascript" language="javascript">$(function(){$nav=$(".navigation"),$add=$("body"),$bg=$(".navigation .overlay"),$navButton=$nav.find("button"),$navButton.on("click",function(){$add.toggleClass("menu-open")})});</script>
       <div class="navigation">
         <div class="overlay"></div>
         <button><span><i class="icon-open"></i></span><i class="arrow"></i></button>
@@ -145,27 +139,20 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
     <div class="nav">
       <div class="links">
         <ul>
-          <li>
+          {block:IfShowSearch}<li>
             <div class="search">
               <form id="searchform" action="/search" method="get">
                 <input id="sbmt" type="submit" value="search">
                 <input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}">
               </form>
             </div>
-          </li>
-          {block:AskEnabled}
-          <li><a title="Contact" href="/ask">contact</a></li>
-          {/block:AskEnabled}
+          </li>{/block:IfShowSearch}
+          {block:AskEnabled}<li><a title="Contact" href="/ask">contact</a></li>{/block:AskEnabled}
+          {block:SubmissionsEnabled}<li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
           
-          {block:SubmissionsEnabled}
-          <li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>
-          {/block:SubmissionsEnabled}
-          
-          {block:HasPages}{block:Pages}
-          <li><a title="{Label}" href="{URL}">{Label}</a></li>
-          {/block:Pages}{/block:HasPages}
-          <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
-          <li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
+          {block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+          {block:IfShowArchive}<li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>{/block:IfShowArchive}
+          {block:IfShowRSS}<li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>{/block:IfShowRSS}
         </ul>
       </div>
     </div>
@@ -282,7 +269,10 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
       {block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div>
     <div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>
-    {/block:Date}{/block:PermalinkPage}{/block:Posts}{block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}<div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+    {/block:Date}{/block:PermalinkPage}{/block:Posts}
+    
+    {block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}
+    <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
     {block:Pagination}
     <div class="pagination" id="pagination" style="display:none;">{block:NextPage}
       <li><a class="next" href="{NextPage}">»</a></li>
@@ -295,6 +285,7 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
     {/block:IndexPage}
     {block:PermalinkPage}{block:PermalinkPagination}
     <div class="permalink-page"> {block:PreviousPost} <a href="{PreviousPost}">Previous Post</a> {/block:PreviousPost}
+      
       {block:NextPost} <a href="{NextPost}">Next Post</a> {/block:NextPost} </div>
     {/block:PermalinkPagination}{/block:PermalinkPage} <a href="#" id="scroll-top"><span class="icon-go-up"></a>
     <div class="credit"> Copyright &copy; {CopyrightYears} {Title} <br>
