@@ -6,7 +6,7 @@
 <!--[if IE 9]><html class="lt-ie10"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
-<title>{Title}</title>
+<title>{Title}{block:SearchPage} | {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} | {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 <link rel="shortcut icon" href="{Favicon}">{block:Hidden}
 <meta name="font:Page font" content="Arial"/>
 <meta name="font:Description font" content="Arial"/>
@@ -36,30 +36,12 @@
 <meta name="TitleColor" content="#fff"/>
 <meta name="text:Page font size" content="13px"/>
 <meta name="text:Google analytics" content=""/>
-{/block:Hidden}{block:Description}
-<meta name="description" content="{MetaDescription}" />
-{/block:Description}
-<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-{block:IndexPage}
-<script type="text/javascript" language="javascript" src=
-"http://static.tumblr.com/vaqsgdj/vxznfxl5w/script.js"></script>
-{/block:IndexPage}
-<script>
-$(document).ready(function(){
-$("#tumblr_controls").css("top",$("header").height()+30);
-var e=$("header").offset().top;
-var t=function(){
-var e=$(window).scrollTop();
-if(e>$(".title").height()){
-    $("header").addClass("fix-menu")}
-    else{
-    $("header").removeClass("fix-menu")}
-};
-t();
-});
-</script>
-<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/CzSnfxmpi/style.css">
-
+{/block:Hidden}{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>{block:IndexPage}
+<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/vxznfxl5w/script.js"></script>{/block:IndexPage}
+<script>$(function(){$("#tumblr_controls").css("top",$("header").height()+30);var b=($("header").offset().top,function(){var a=$(window).scrollTop();a>$(".title").height()?$("header").addClass("fix-menu"):$("header").removeClass("fix-menu")});b()});</script>
+<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/CzSnfxmpi/style.css">{block:PermalinkPage}
+<link rel="stylesheet" href="http://static.tumblr.com/wofln30/FGGmyt1xp/colorbox.css">{/block:PermalinkPage}
 <style type="text/css">
 /************************\ DEFAULT /************************/
 body { color: {color:text}; font-family: {font:Page font}; font-size: {text:Page font size}; background: {BackgroundColor} url('{image:background}') center; border:20px solid {AccentColor}; }
@@ -105,7 +87,6 @@ blockquote { border-left: 2px solid {color:text};}
 .text { padding: 20px; max-width: 680px;}
 .ask { width:90%!important;}
 .meta { padding-top:10px; margin: 0 auto; width: 700px;}
-
 .caption{ margin: 0 auto; max-width: 700px;}
 ol.notes::-webkit-scrollbar{display:none;}
 ol.notes{padding: 0 20px 0 0;margin 0px 0px;list-style-type:none;font-size:11 px; max-height: 190px; overflow-y: auto;}
@@ -120,8 +101,7 @@ ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}
 ol.notes li.note.blockquote a{text-decoration:none;}
 .permalink-page { text-align:center;}
 .permalink-page a { display: inline-block; text-align: center; padding: 7px; width: 130px; border: 1px solid; margin: 12px 4px; font-size: 12px; font-weight: 900; text-transform: uppercase;}
-/************************\ END PERMALINK PAGE /************************/
-{/block:PermalinkPage}
+/************************\ END PERMALINK PAGE /************************/{/block:PermalinkPage}
 
 #scroll-top { background:{AccentColor}; color:{Titlecolor};}
 
@@ -131,9 +111,7 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 @media only screen and (max-width: 850px){ #foot {position:relative; max-width:330px;} #menu { margin-left: -8%; bottom: 10px; left: auto;} body { position:relative; left:0; -webkit-transition: left .7s ease-in-out; -moz-transition: left .7s ease-in-out; -o-transition: left .7s ease-in-out; transition: left .7s ease-in-out; } .menu-open {position:relative; left: 50%; -webkit-transition: left .7s ease-in-out; -moz-transition: left .7s ease-in-out; -o-transition: left .7s ease-in-out; transition: left .7s ease-in-out;} .nav { width: 0; top:0; left: 0!important; position: fixed;} .menu-open .nav {background: {Accentcolor}; visibility: visible; width: 50%;} .links ul li a ,.search { display: block;} #content {margin: 0;} .post{width:100%!important;; margin:10px 0;} .text {padding:2em 2em 4em;}.photo,.photo img {width:100%!important;}}
 @media only screen and (min-width: 860px) { #content {margin-left: 0%;} #menu { position:fixed!important; max-width: 100%!important;} .links { left: -50%; right: -50%; } .search input:active,.search input:focus { width: 100%; position: fixed;} .fix-menu .search input:active,.fix-menu .search input:focus {top:0;}}
 @media only screen { button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer;}}
-
 /************************\ END RESPONSIVE STYLE /************************/
-
 </style>
 
 </head>
@@ -269,8 +247,8 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
                       <div class="imgset">{block:Photos}
                         <li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>
                         {/block:Photos}</div>{block:IfPhotoHover}</div>{/block:IfPhotoHover}{/block:IndexPage}
-                      {block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>
-                      {Photoset-700}{/block:PermalinkPage}
+                      {block:PermalinkPage}
+                      <figure class="photoset-grid-lightbox photoset" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{PhotoURL-HighRes}" {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes} {block:Caption}alt="{Caption}"{/block:caption} />{/block:Photos}</figure>{/block:PermalinkPage}
                     {/block:Photoset} 
                     
                     {block:Audio}
@@ -304,16 +282,7 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
       {block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div>
     <div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>
-    {/block:Date}{/block:PermalinkPage}
-    
-    {/block:Posts}
-    
-    {block:ContentSource}
-    <!— {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-    {/block:SourceLogo}
-    {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
-    {/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
-    <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+    {/block:Date}{/block:PermalinkPage}{/block:Posts}{block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}<div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
     {block:Pagination}
     <div class="pagination" id="pagination" style="display:none;">{block:NextPage}
       <li><a class="next" href="{NextPage}">»</a></li>
@@ -326,15 +295,14 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
     {/block:IndexPage}
     {block:PermalinkPage}{block:PermalinkPagination}
     <div class="permalink-page"> {block:PreviousPost} <a href="{PreviousPost}">Previous Post</a> {/block:PreviousPost}
-      
       {block:NextPost} <a href="{NextPost}">Next Post</a> {/block:NextPost} </div>
     {/block:PermalinkPagination}{/block:PermalinkPage} <a href="#" id="scroll-top"><span class="icon-go-up"></a>
     <div class="credit"> Copyright &copy; {CopyrightYears} {Title} <br>
       Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Sejuk Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a> </div>
   </div>
 </div>
-{block:IfGoogleanalytics}di
-<script type="text/javascript">
+{block:PermalinkPage}<script src="http://static.tumblr.com/wofln30/2XXmyt1i0/jquery.colorbox.js"></script><script src="http://static.tumblr.com/wofln30/lFrmyt0d1/jquery.photoset-grid.min.js"></script><script>$(".photoset").photosetGrid({highresLinks:!0,rel:"withhearts-gallery",gutter:"2px",onComplete:function(){$(".photoset-grid-lightbox").attr("style",""),$(".photoset-grid-lightbox a.photoset-cell").colorbox({transition:"none",photo:!0,scalePhotos:!0,maxHeight:"90%",maxWidth:"90%"})}});</script>{/block:PermalinkPage}
+{block:IfGoogleanalytics}<script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '{text:Google analytics}']);
       _gaq.push(['_trackPageview']);
@@ -343,7 +311,6 @@ $navButton.on("click",function(){$add.toggleClass("menu-open");});
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
-{/block:IfGoogleanalytics}
+    </script>{/block:IfGoogleanalytics}
 </body>
 </html>
