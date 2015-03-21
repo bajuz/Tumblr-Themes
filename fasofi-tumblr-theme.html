@@ -234,7 +234,7 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 <div class="ask"><b>{Name} answered :</b>{Answer}</div>
 <div class="clear"></div>{/block:Answer}
 {block:Video}<div class="video{block:IndexPage} no-pad">{Video-250}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>{/block:Video}
-{block:Photoset}<div class="photoset-grid-lightbox photoset" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{PhotoURL-HighRes}" {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes} {block:Caption}alt="{Caption}"{/block:caption} />{/block:Photos}</div>{/block:Photoset} 
+{block:Photoset}<div class="photoset-grid-lightbox photoset" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{block:IndexPage}{PhotoURL-400}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes} {block:Caption}alt="{Caption}"{/block:caption} />{/block:Photos}</div>{/block:Photoset} 
 {block:Audio}<div class="music">{block:AlbumArt}<a href="{Permalink}"><img class="no-pad" src="{AlbumArtURL}"></a>{/block:AlbumArt}
 <div class="box"><div class="player">{AudioPlayerBlack}</div></div></div>{/block:Audio}
 {block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}{/block:IndexPage}
