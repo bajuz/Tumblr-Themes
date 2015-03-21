@@ -26,7 +26,7 @@
         {block:PermalinkPage}{block:Posts}{block:Date}<link rel="canonical" href="{Permalink}"><link rel="shortlink" href="{ShortURL}">{/block:Date}{/block:Posts}{/block:PermalinkPage}
 <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="http://static.tumblr.com/vaqsgdj/cQanlk0ry/jquery.min.js"><\/script>')</script>
 {block:PermalinkPage}<script src="http://static.tumblr.com/vaqsgdj/Ctjnfzih5/script.js"/></script>{/block:PermalinkPage}{block:IndexPage}<script type="text/javascript" language="javascript" src="http://static.tumblr.com/vaqsgdj/rGanivgaz/script.js"/></script>{/block:IndexPage}
-<style type="text/css">
+<link rel="stylesheet" href="http://static.tumblr.com/wofln30/FGGmyt1xp/colorbox.css"><style type="text/css">
 /************************\ DEFAULT /************************/
 body { margin: 0; padding: 0; line-height: 25px; color: {color:Text}; font-family: {Font:Body}; font-size: {text:Font Size}; background-color: {color:Background}; overflow-x: hidden; }
 
@@ -234,7 +234,7 @@ ol.notes li.note.blockquote a{text-decoration:none;}
 <div class="ask"><b>{Name} answered :</b>{Answer}</div>
 <div class="clear"></div>{/block:Answer}
 {block:Video}<div class="video{block:IndexPage} no-pad">{Video-250}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>{/block:Video}
-{block:Photoset}{Photoset}{/block:Photoset} 
+{block:Photoset}<div class="photoset-grid-lightbox photoset" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{PhotoURL-HighRes}" {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes} {block:Caption}alt="{Caption}"{/block:caption} />{/block:Photos}</div>{/block:Photoset} 
 {block:Audio}<div class="music">{block:AlbumArt}<a href="{Permalink}"><img class="no-pad" src="{AlbumArtURL}"></a>{/block:AlbumArt}
 <div class="box"><div class="player">{AudioPlayerBlack}</div></div></div>{/block:Audio}
 {block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}{/block:IndexPage}
@@ -247,9 +247,8 @@ ol.notes li.note.blockquote a{text-decoration:none;}
     <a href="#" id="scroll-top">&#9650;</a>
     <div class="credit">© {CopyrightYears} {Title} <br> Powered by <a href="http//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Fasofi Theme">Fasofi Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Tumblr Themes">bajuz</a>
     </div>
-</div>{/block:IndexPage}    
-</div>
-{block:IfGoogleAnalytics}<script type="text/javascript">
+</div>{/block:IndexPage}</div>
+<script src="http://static.tumblr.com/wofln30/2XXmyt1i0/jquery.colorbox.js"></script><script src="http://static.tumblr.com/wofln30/lFrmyt0d1/jquery.photoset-grid.min.js"></script><script>$(".photoset").photosetGrid({highresLinks:!0,rel:"withhearts-gallery",gutter:"2px",onComplete:function(){$(".photoset-grid-lightbox").attr("style",""),$(".photoset-grid-lightbox a.photoset-cell").colorbox({transition:"none",photo:!0,scalePhotos:!0,maxHeight:"90%",maxWidth:"90%"})}});</script>{block:IfGoogleAnalytics}<script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '{text:Google Analytics}']);
       _gaq.push(['_trackPageview']);
