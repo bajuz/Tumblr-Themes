@@ -1,85 +1,85 @@
 <!DOCTYPE html/><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"/> <![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"/> <![endif]--><!--[if IE 8]><html class="no-js lt-ie9"/> <![endif]--><!--[if gt IE 8]><!--> <html class="no-js"/> <!--<![endif]--><head><!-- DIBLAH Tumblr Themes // bajuz-themes.tumblr.com --><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <title>{Title}{block:PermalinkPage}{block:PostSummary} | {PlaintextPostSummary}{/block:PostSummary}{block:PermalinkPage}
         {block:SearchPage} | {lang:Search results for SearchQuery}{/block:SearchPage}</title>
-        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
-        {block:PermalinkPage}{block:Posts}{block:Date}<link rel="canonical" href="{Permalink}"><link rel="shortlink" href="{ShortURL}">{/block:Date}{/block:Posts}{/block:PermalinkPage}
+        {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}{block:PermalinkPage}
+        {block:Posts}{block:Date}<link rel="canonical" href="{Permalink}"><link rel="shortlink" href="{ShortURL}">{/block:Date}{/block:Posts}{/block:PermalinkPage}
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="shortcut icon" href="{Favicon}">
-        <link rel="apple-touch-icon" href="{PortraitURL-128}">
-        {block:Hidden}<meta name="image:Logo" content=""><meta name="image:Background" content=""><meta name="color:Background color" content="#eee"/><meta name="font:Body" content="Arial"/><meta name="color:Text color" content="#000"/><meta name="if:Show Captions" content="1"/><meta name="if:Photo Icons" content="1"/><meta name="if:Post Icons White" content="0"/><meta name="select:Background Style" content="" title="Normal"><meta name="select:Background Style" content="cover" title="Cover"><meta name="select:Background Style" content="repeat" title="Repeat"><meta name="select:Background Style" content="repeat-x" title="Repeat X"><meta name="select:Background Style" content="repeat-y" title="Repeat Y"><meta name="select:Photos Hover Color" content="" title="Normal"><meta name="select:Photos Hover Color" content="gray" title="Grayscale"><meta name="color:Post color" content="#fff"/><meta name="color:Text post Color" content="#000"/><meta name="color:Link post color" content="#000"/><meta name="color:Link color" content="#000"/><meta name="color:Link hover color" content="#999"/><meta name="color:Menu background color" content="#fff"/><meta name="font:Title" content="Arial"/><meta name="font:Description" content="Arial"/><meta name="color:Menu text color" content="#000"/><meta name="color:Menu link color" content="#fff"/><meta name="color:Menu link hover color" content="#000"/><meta name="color:Menu Accent color" content="#000"/><meta name="text:Font Size" content="13px"/><meta name="text:Google Analytics" content=""/>
-{/block:Hidden}<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/pGJnfq718/social.css">
-<style type="text/css">body { color: {color:text color}; font-family: {font:Body}; font-size: {text:Font Size}; background: {color:Background color} url('{image:background}') center;} a {Color: {color:Link color};} a:hover {Color: {color:link hover color};} blockquote { border-left: 2px solid {color:text color};} input { background:{color:Background color};} #menu { background: {color:Menu background color}; color:{color:Menu text color}; overflow-y:auto!important;} #menu .desc a {color:{color:Menu text color};} .title h1, .title h1 a{ font-family: {font:Title}; Color: {TitleColor};} .title h1:hover{color: {TitleColor};} .desc{ font-family:{font:Description};} .links ul li a,.search input{ background:{color:Menu accent color}; color:{color:Menu Link color}; border:7px double {color:Menu accent color};} .links ul li a:hover { color:{color:Menu link hover color}; border:7px double {color:Menu link hover color};} .post { background: {color:Post color};Color:{color:Text post color};} .post a {Color:{color:Link post color};}
-</style>
+        <link rel="apple-touch-icon" href="{PortraitURL-128}">{block:Hidden}<meta name="image:Logo" content="">
+        <meta name="image:Background" content="">
+        <meta name="color:Background color" content="#eee"/>
+        <meta name="font:Body" content="Arial"/>
+        <meta name="color:Text color" content="#000"/>
+        <meta name="if:Show Captions" content="1"/>
+        <meta name="if:Photo Icons" content="1"/>
+        <meta name="if:Post Icons White" content="0"/>
+	    <meta name="select:Column" content="two" title="Two">
+        <meta name="select:Column" content="one" title="One">
+        <meta name="select:Pagination" content="load-more" title="Load More">
+	    <meta name="select:Pagination" content="standard" title="Standard">
+	    <meta name="select:Pagination" content="infinite-scroll" title="Infinite Scroll">
+        <meta name="select:Background Style" content="" title="Normal">
+        <meta name="select:Background Style" content="cover" title="Cover">
+        <meta name="select:Background Style" content="repeat" title="Repeat">
+        <meta name="select:Background Style" content="repeat-x" title="Repeat X">
+        <meta name="select:Background Style" content="repeat-y" title="Repeat Y">
+        <meta name="select:Photos Hover Color" content="" title="Normal">
+        <meta name="select:Photos Hover Color" content="gray" title="Grayscale">
+        <meta name="color:Post color" content="#fff"/>
+        <meta name="color:Text post Color" content="#000"/>
+        <meta name="color:Link post color" content="#000"/>
+        <meta name="color:Link color" content="#000"/>
+        <meta name="color:Link hover color" content="#999"/>
+        <meta name="color:Menu background color" content="#fff"/>
+        <meta name="font:Title" content="Arial"/>
+        <meta name="font:Description" content="Arial"/>
+        <meta name="color:Menu text color" content="#000"/>
+        <meta name="color:Menu link color" content="#fff"/>
+        <meta name="color:Menu link hover color" content="#000"/>
+        <meta name="color:Menu Accent color" content="#000"/>
+        <meta name="text:Font Size" content="13px"/>
+        <meta name="text:Google Analytics" content=""/>{/block:Hidden}
+        <script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="http://static.tumblr.com/vaqsgdj/cQanlk0ry/jquery.min.js"><\/script>')</script>
+<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/qPBnlma6r/ico.css">
+<style type="text/css">body { color: {color:text color}; font-family: {font:Body}; font-size: {text:Font Size}; background: {color:Background color} url('{image:background}') center;} a {Color: {color:Link color};} a:hover {Color: {color:link hover color};} blockquote { border-left: 2px solid {color:text color};} input { background:{color:Background color};} #menu { background: {color:Menu background color}; color:{color:Menu text color}; overflow-y:auto!important;} #menu .desc a {color:{color:Menu text color};} .title h1, .title h1 a{ font-family: {font:Title}; Color: {TitleColor};} .title h1:hover{color: {TitleColor};} .desc{ font-family:{font:Description};} .links ul li a,.search input{ background:{color:Menu accent color}; color:{color:Menu Link color}; border:7px double {color:Menu accent color};} .links ul li a:hover { color:{color:Menu link hover color}; border:7px double {color:Menu link hover color};} .post { background: {color:Post color};Color:{color:Text post color};} .post a {Color:{color:Link post color};}</style>
 {block:PermalinkPage}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/deVnfoxzg/diblah-style.css">
-<style type="text/css">
-/************************\ PERMALINK PAGE /************************/
+<style type="text/css">/************************\ PERMALINK PAGE /************************/
 @media only screen and (min-width: 1000px){ #content {padding:0 3em;} }.post { display:block; max-width:700px; margin: 20px auto 0;}.photo { text-align: center;}.video iframe, .video embbed {max-width: 100%!important;}#notes { max-width: 700px; margin: 0 auto;}.text { padding: 20px; max-width: 680px;}.ask { width:90%!important;}.meta { padding-top:10px; margin: 0 auto; width: 700px;}.caption{ margin: 0 auto; max-width: 700px;}ol.notes::-webkit-scrollbar{display:none;}ol.notes{padding: 0 20px 0 0;margin 0px 0px;list-style-type:none;font-size:11 px; max-height: 190px; overflow-y: auto;}ol.notes li.note{padding:0px;font-size:11px;}ol.notes li.note img{padding:0;}ol.notes li.note img.avatar{vertical-align:-15px;margin-right:5px;width:16px;height:16px;}ol.notes li.note a img.avatar{padding: 10px;border-width:0;border:none;}ol.notes li.note img{padding:0;border-width:0;border:none;}ol.notes li.note span.action{font-weight:bold;}ol.notes li.note.answer_content{font-weight:normal;}ol.notes li.note.blockquote{padding:1px 1px;margin:1px 0px 0px 1px;}ol.notes li.note.blockquote a{text-decoration:none;}.permalink-page { text-align:center;}.permalink-page a { display: inline-block; text-align: center; padding: 7px; width: 130px; margin: 12px 4px; font-size: 12px; font-weight: 900; text-transform: uppercase;}
-/************************\ END PERMALINK PAGE /************************/
-</style>{/block:PermalinkPage}
-{block:IfNotPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/vcznfq6bx/diblah-idx-style.css">{/block:IfNotPhotoIcons}
-{block:IfPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/tx3nfq6c2/diblah-idx-hover-style.css">{/block:IfPhotoIcons}
-<style type="text/css">#load { Color: {TitleColor}; } #load:hover{Color: {Link color};} {block:IndexPage} .caption blockquote { border-left: 2px solid {color:text Post};} .perma a {Color:{block:IfPostIconsWhite}white{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}black{/block:IfNotPostIconsWhite}!important;} {/block:IndexPage} #scroll-top { background:{color:Menu accent color}; color:{color:Menu link color};}
+/************************\ END PERMALINK PAGE /************************/</style>{/block:PermalinkPage}
+{block:IndexPage}{block:IfNotPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/vcznfq6bx/diblah-idx-style.css">{/block:IfNotPhotoIcons}{block:IfPhotoIcons}<link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/tx3nfq6c2/diblah-idx-hover-style.css">{/block:IfPhotoIcons}{/block:IndexPage}
+<style type="text/css">@media only screen and (max-width: 695px){.photo .hover img {width:100%;}}@media only screen and (min-width: 695px){.one .post,.one .photo{width: 95%!important;}.one .photo .hover img{width:100%;}}iframe.tumblr_audio_player { height: auto!important;}#pagination a {Color: {TitleColor};padding:15px;}#pagination a:hover{Color: {Link color};}#load { Color: {TitleColor}; } #load:hover{Color: {Link color};} {block:IndexPage} .caption blockquote { border-left: 2px solid {color:text Post};} .perma a {Color:{block:IfPostIconsWhite}white{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}black{/block:IfNotPostIconsWhite}!important;} {/block:IndexPage} #scroll-top { background:{color:Menu accent color}; color:{color:Menu link color};}
 {CustomCSS}
 </style>{block:IndexPage}
 <script type="text/javascript" language="javascript" src=
-"http://static.tumblr.com/vaqsgdj/JKimt7g3g/infinitexmason.js"></script>
-<script type="text/javascript" language="javascript" src=
-"http://static.tumblr.com/vaqsgdj/PEZn3ovo4/index-diblah.js"></script>
+"http://static.tumblr.com/vaqsgdj/aCMnlm8y2/diblah.js"></script>
 {/block:IndexPage}</head>
 <body class="{select:Background Style}">
-
 <div id="wrap">
-
 <div id="menu">
-
 <div class="title">
 {block:IfLogoImage}<a title="{Title}" href="/"><img src="{Image:logo}"></a>{/block:IfLogoImage}{block:IfNotLogoImage}<h1><a title="{Title}" href="/">{Title}</a></h1>{/block:IfNotLogoImage}
-
 {block:description}<div class="desc">{description}</div>{/block:description}
 </div>
-
 <div class="links">
 <ul>
 <li><a title="Home" href="/">Home</a></li>
 {block:AskEnabled}<li><a title="Contact" href="/ask">contact</a></li>{/block:AskEnabled}
-
 {block:SubmissionsEnabled}<li><a title="{SubmitLabel}" href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
-
 {block:HasPages}{block:Pages}<li><a title="{Label}" href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-
 <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
 <li><a href="{RSS}" title="{lang:RSS}">Feeds</a></li>
-
 <li><div class="search" style="display:none;"><form id="searchform" action="/search" method="get"><input id="sbmt" type="submit" value="search"><input title="Search" id="s" name="q" placeholder="SEARCH" type="{lang:search}" value="{SearchQuery}"></form></div></li>
 </ul>
-
 </div>
 </div>
-
-<div id="content">
-
-{block:Posts}
+<div id="content" class="{select:Column}">{block:Posts}
 <div class="post{block:Photo} photo{/block:Photo}{block:Photoset} photo{/block:Photoset}" id="{Postid}">{block:Text}<div class="text">{/block:Text}{block:Link}<div class="text">{/block:Link}{block:Quote}<div class="text">{/block:Quote}{block:Chat}<div class="text">{/block:Chat}{block:Answer}<div class="text">{/block:Answer}{block:Video}<div class="text">{/block:Video}{block:Audio}<div class="text">{/block:Audio}
-
-{block:Text}
-{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}
-<div class="description">{Body}</div>
-{/block:Text}
-
-{block:Link}
-<a href="{URL}" class="link" {Target}>{Name}</a>
-{block:Description}<div class="description">{Description}</div>{/block:Description}
-{/block:Link}
-
-{block:Quote}
-<b>"{Quote}"</b>
-{block:Source}<br>&mdash; {Source}{/block:Source}
-{/block:Quote}
-
-{block:Photo}
-{block:IndexPage}
-{block:IfPhotoIcons}<div class="hover">
+{block:Text}{block:Title}<a title="{lang:Permalink}" href="{Permalink}">{Title}</a>{/block:Title}<div class="description">{Body}</div>{/block:Text}
+{block:Link}<a href="{URL}" class="link" {Target}>{Name}</a>
+{block:Description}<div class="description">{Description}</div>{/block:Description}{/block:Link}
+{block:Quote}<b>"{Quote}"</b>
+{block:Source}<br>&mdash; {Source}{/block:Source}{/block:Quote}
+{block:Photo}{block:IndexPage}{block:IfPhotoIcons}<div class="hover">
 <div class="dtl">
 <div class="info">
     <a href="{Permalink}" title="{lang:Permalink}">Details</a>
@@ -88,32 +88,18 @@
 </div>
 </div>
 <div class="bg"></div>{/block:IfPhotoIcons}
-{block:IfNotPhotoIcons}<a href="{Permalink}" title="{lang:Permalink}">{/block:IfNotPhotoIcons}<img class="{select:Photos Hover Color}" src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfNotPhotoIcons}</a>{/block:IfNotPhotoIcons}{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
-{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}
-{/block:Photo}
-
-{block:Chat}
-{block:Title}<h2>{Title}</h2>{/block:Title}
+{block:IfNotPhotoIcons}<a href="{Permalink}" title="{lang:Permalink}">{/block:IfNotPhotoIcons}<img class="{select:Photos Hover Color}" src="{PhotoURL-400}"  alt="{PhotoAlt}" border="0"/>{block:IfNotPhotoIcons}</a>{/block:IfNotPhotoIcons}{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}{/block:IndexPage}{block:PermalinkPage}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}{/block:PermalinkPage}{/block:Photo}
+{block:Chat}{block:Title}<h2>{Title}</h2>{/block:Title}
 <div class="description">
 <ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}</ul>
-</div>
-{/block:Chat}
-
-{block:Answer}
-<img class="asker_img" src="{AskerPortraitURL-24}"/>
+</div>{/block:Chat}
+{block:Answer}<img class="asker_img" src="{AskerPortraitURL-24}"/>
 <div class="ask"><b>{Asker} asked :</b><p>{Question}</p></div>
 <img class="asker_img" src="{PortraitURL-24}"/>
 <div class="ask"><b>{Name} answered :</b>{Answer}</div>
-<div class="clear"></div>
-{/block:Answer}
-
-{block:Video}
-<div class="video{block:IndexPage} no-pad">{Video-500}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>
-{/block:Video}
-
-{block:Photoset}
-{block:IndexPage}
-{block:IfPhotoIcons}<div class="hover">
+<div class="clear"></div>{/block:Answer}
+{block:Video}<div class="video{block:IndexPage} no-pad">{Video-500}{/block:IndexPage}{block:PermalinkPage}">{Video-700}{/block:PermalinkPage}</div>{/block:Video}
+{block:Photoset}{block:IndexPage}{block:IfPhotoIcons}<div class="hover">
 <div class="dtl">
 <div class="info">
     <a href="{Permalink}" title="{lang:Permalink}">Details</a>
@@ -123,59 +109,35 @@
 </div>
 <div class="bg"></div>{/block:IfPhotoIcons}
 <a href="{Permalink}" data-description="{PhotoAlt}" title="{lang:Permalink}"><div class="imgset">{block:Photos}<li><img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/></li>{/block:Photos}</div></a>{block:IfPhotoIcons}</div>{/block:IfPhotoIcons}
-{/block:IndexPage}
-{block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>
-{Photoset-700}{/block:PermalinkPage}
-{/block:Photoset} 
-
+{/block:IndexPage}{block:PermalinkPage}<script>$(document).ready(function() { $('.photoset').css('width', '100%');});</script>{Photoset-700}{/block:PermalinkPage}{/block:Photoset} 
 {block:Audio}<div class="music no-pad">
-<div class="box"><div class="player">{block:AlbumArt}<a href="{Permalink}"><img src="{AlbumArtURL}"></a>{/block:AlbumArt}{AudioPlayerBlack}</div></div></div>
-{/block:Audio}
-
-{block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}{block:Photoset}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{/block:Photoset}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}{/block:IndexPage}
-
-{block:IndexPage}<div class="permalink{block:Photo} none{/block:Photo}{block:Photoset} none{/block:Photoset}"><div class="icon">{block:IfPostIconsWhite}{LikeButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{LikeButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="icon">{block:IfPostIconsWhite}{ReblogButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{ReblogButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="perma"><a title="{lang:Permalink}" href="{Permalink}">Details</a><span><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" class="social-twitter" target="_blank"></a> <a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" class="social-facebook" target="_blank"></a></span></div></div>{/block:IndexPage}
-
+<div class="box"><div class="player">{block:AlbumArt}<a href="{Permalink}"><img src="{AlbumArtURL}"></a>{/block:AlbumArt}{AudioPlayerBlack}</div></div></div>{/block:Audio}
+{block:IndexPage}{block:IfShowCaptions}{block:Caption}<div class="{block:Photo}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{/block:Photo}{block:Photoset}{block:IfPhotoIcons}pad {/block:IfPhotoIcons}{block:IfNotPhotoIcons}gap {/block:IfNotPhotoIcons}{/block:Photoset}caption">{Caption}</div>{/block:Caption}{/block:IfShowCaptions}<div class="permalink {block:IfNotPhotoIcons}{block:Photo}gap clear {block:Photo}{block:Photoset}gap clear {/block:Photoset}{/block:IfNotPhotoIcons}{block:IfPhotoIcons}{block:Photo} none{/block:Photo}{block:Photoset} none{/block:Photoset}{/block:IfPhotoIcons}" {block:IfNotPhotoIcons}{block:Photo}style="padding-bottom: 50px!important;"{block:Photo}{block:Photoset}style="padding-bottom: 50px!important;"{/block:Photoset}{/block:IfNotPhotoIcons}><div class="icon">{block:IfPostIconsWhite}{LikeButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{LikeButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="icon">{block:IfPostIconsWhite}{ReblogButton color="white" size="20"}{/block:IfPostIconsWhite}{block:IfNotPostIconsWhite}{ReblogButton color="black" size="20"}{/block:IfNotPostIconsWhite}</div><div class="perma"><a title="{lang:Permalink}" href="{Permalink}">Details</a><span style="width:80px;"><a href="http://twitter.com/intent/tweet?url={URLEncodedShortURL}" class="icon-twitter" target="_blank"></a> <a href="https://www.facebook.com/dialog/feed?app_id=221438161314294&link={URLEncodedPermalink}&redirect_uri={URLEncodedPermalink}" class="icon-facebook" target="_blank"></a> <a href="https://plus.google.com/share?url={URLEncodedShortURL}" class="icon-gplus" target="_blank"></a> {block:Photoset}<a href="https://pinterest.com/pin/create/button/?url={URLEncodedShortURL}{block:Photos}&media={PhotoURL-HighRes}{/block:Photos}" class="icon-pinterest" target="_blank"></a>{/block:Photoset}{block:Photo}<a href="https://pinterest.com/pin/create/button/?url={URLEncodedShortURL}&media={URLEncodedPhotoURL-HighRes}" class="icon-pinterest" target="_blank"></a>{/block:Photo}</span></div></div>{/block:IndexPage}
 </div>
 {block:Text}</div>{/block:Text}{block:Link}</div>{/block:Link}{block:Quote}</div>{/block:Quote}{block:Chat}</div>{/block:Chat}{block:Answer}</div>{/block:Answer}{block:Video}</div>{/block:Video}{block:Audio}</div>{/block:Audio}
-
-{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}
-
-{/block:Posts}
-
-{block:ContentSource}
-<!— {SourceURL}{block:NoSourceLogo}<img src="{BlackLogoURL}"width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-{/block:SourceLogo}
-{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
-{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+{block:PermalinkPage}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{block:Date}<div class="meta"><span>{Month} {DayOfMonth}, {Year} - {NoteCountWithLabel}</span><br>{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp{/block:Tags}{/block:HasTags}</div><div class="meta addthis_toolbox addthis_default_style " addthis:title="{Title}" addthis:url="{Permalink}"><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_preferred_4"></a><a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-522d3927133b7ced"></script>{/block:Date}{/block:PermalinkPage}{/block:Posts}{block:Hidden}{block:NotReblog}{block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {/block:NotReblog} {block:RebloggedFrom} {block:ContentSource} {lang:Source} {SourceURL} {SourceTitle} {/block:ContentSource} {ReblogParentURL}{ReblogParentName} {/block:RebloggedFrom}{/block:Hidden}
 <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
-
-{block:Pagination}<div class="pagination" id="pagination" style="display:none;">{block:NextPage}<li><a class="next" href="{NextPage}">»</a></li>{/block:NextPage}</div>{/block:Pagination}
 <div class="clear"></div>
 </div>    
-    
 <div id="foot">
-{block:IndexPage}
-<div id="navigator">
+{block:IndexPage}<div id="navigator" class="{select:Pagination}">
     <a id="load">Load More</a>
-</div>
-{/block:IndexPage}
+    <div id="pagination" style="display:none;">{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}" title="{lang:Newer posts}"><strong>&larr; {lang:Prev}</strong></a>{/block:PreviousPage}
+                {block:NextPage}<a class="next" href="{NextPage}" class="older" title="{lang:Older posts}"><strong>{lang:Next} &rarr;</strong></a>{/block:NextPage}{/block:Pagination}</div>
+</div>{/block:IndexPage}
 {block:PermalinkPage}{block:PermalinkPagination}
     <div class="permalink-page">
-        {block:PreviousPost}<a href="{PreviousPost}">Previous Post</a>{/block:PreviousPost}
-        {block:NextPost}<a href="{NextPost}">Next Post</a>{/block:NextPost} 
+        {block:PreviousPost}<a href="{PreviousPost}" title="{lang:Previous post}">{lang:Previous post}</a>{/block:PreviousPost}
+        {block:NextPost}<a href="{NextPost}" title="{lang:Next post}">{lang:Next post}</a>{/block:NextPost} 
     </div>
 {/block:PermalinkPagination}{/block:PermalinkPage}
-    <a href="#" id="scroll-top"><i class="social-up"></i></a>
+    <a href="#" id="scroll-top"><i class="icon-up"></i></a>
     <div class="credit">
-        Copyright &copy; {CopyrightYears} {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Diblah Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Theme">bajuz</a>
+        Copyright &copy; {CopyrightYears} {Title} <br> Powered by <a href="http;//tumblr.com">Tumblr</a> - <a href="http://bajuz-themes.tumblr.com" title="Theme">Diblah Theme</a> by <a href="http://bajuz-themes.tumblr.com" title="Tumblr Theme">bajuz</a>
     </div>
 </div>  
-    
 </div>
-
-{block:IfGoogleAnalytics}
-    <script type="text/javascript">
+{block:IfGoogleAnalytics}<script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '{text:Google Analytics}']);
       _gaq.push(['_trackPageview']);
@@ -184,7 +146,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
-{/block:IfGoogleAnalytics}
+    </script>{/block:IfGoogleAnalytics}
 </body>
 </html>
