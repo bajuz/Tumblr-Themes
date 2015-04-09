@@ -143,6 +143,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','{text:GoogleAnalyticsID}');ga('send','pageview');
-        </script>
-    {/block:IfGoogleAnalyticsID}</body>
+        </script>{/block:IfGoogleAnalyticsID}
+    </body>
 </html>
