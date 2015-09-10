@@ -14,7 +14,7 @@
     <script src="http://static.tumblr.com/e6lc7yi/hRfmidqdw/modernizr.js"></script>
     <link rel="stylesheet" href="http://static.tumblr.com/wdg4six/SLGn2kwl9/bakedpixel-icons.css">
     <link rel="stylesheet" href="http://static.tumblr.com/wdg4six/Y0wn2gegv/rightbox.css">
-    <link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/9sYntwe0y/arah.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/vaqsgdj/I6wnug3nj/arah.css">
     {block:Hidden}
     <!-- Custom Options -->
     <!-- Custom Images -->
@@ -49,6 +49,10 @@
     <meta name="text:URL Vimeo" content=""/>
     <meta name="text:URL Dribbble" content=""/>
     <meta name="text:URL Behance" content=""/>
+    <meta name="text:Flickr ID" content="">
+    <meta name="text:Dribbble Username" content="">
+    <meta name="text:Instagram User ID" content="">
+    <meta name="text:Instagram Access Token" content="">
     <!-- Custom Font -->
     <meta name="font:BlogTitleFont" content="Helvetica Neue"/>
     <meta name="font:BodyFont" content="Helvetica Neue"/>
@@ -71,7 +75,7 @@
     <meta name="select:Menu Position" content="left" title="Left">
     <meta name="select:Menu Position" content="right" title="Right">{/block:Hidden}
 	<style type="text/css">
-    {block:IfWhiteIcons} .image .icons li,.image .perma .go{background-color:#000!important}.icons li a{color:#fff!important} {/block:IfWhiteIcons} body { background: {color:Background}; color: {color:Text}; font-family: {font:BodyFont}; } a { color: {color:Link}; } a:hover { color: {color:Link Hover}; } h1.blogtitle {font-family: {font:BlogTitleFont};} .menu { margin-top: {text:Menu Top Margin}; } .timeago a, .group-author a { color: {color:Text}; } h1.blogtitle a{ color: {color:Blog Title}; } .menu .menu-toggle { color: {color:Menu Icon}; } .menu .menu-toggle .menu-toggle-hamburger:before, .menu .menu-toggle .menu-toggle-hamburger:after { background: {color:Menu Icon}; } .menu .menu-toggle:hover, .menu .menu-toggle.on { color: {color:Menu Icon}; } .menu .menu-toggle:hover .icon-menu, .menu.on .menu-toggle .icon-menu { color: {color:Menu Icon Hover}!important; } @media only screen and (min-width: 768px) { .menu nav input { background: {color:Background}; color: {color:Link}; } .menu nav input:focus { background: {color:Background}; color: {color:Link Hover}; } } @media only screen and (max-width: 768px) { .menu nav { background: {color:Menu Background}; } .menu nav:after{ border-bottom-color: {color:Menu Background}; } .menu nav ul li a { color: {color:Menu Text}; } .menu nav ul li a:hover { background: {color:Menu Hover Background}; color: {color:Menu Hover Text}; } .menu nav input { background: {color:Menu Background}; color: {color:Menu Text}; } .menu nav input:focus { background: {color:Menu Hover Background}; color: {color:Menu Hover Text};  } ::-webkit-input-placeholder { color: {color:Menu Text}; } :-moz-placeholder { color: {color:Menu Text}; } ::-moz-placeholder { color: {color:Menu Text}; } :-ms-input-placeholder { color: {color:Menu Text}; } .menu-foot,.menu-foot a{ color:{color:Menu Text}; } } footer .type_pagination.pagination_load-more .load-more, footer .type_pagination .scroll-top, footer .type_pagination .pagination a, footer .post-nav a { color: {color:Menu Icon}; } footer .type_pagination .load-more:hover, footer .type_pagination .scroll-top:hover, footer .type_pagination .pagination a:hover, footer .post-nav a:hover { color: {color:Menu Icon}; } @media only screen and (min-width: 768px) { footer .type_pagination .load-more:hover, footer .type_pagination .scroll-top:hover, footer .type_pagination .pagination a:hover, footer .post-nav a:hover { color: {color:Menu Icon Hover}; } } .social-menu li a { color: {color:Social Icon}; } .social-menu li a:hover { color: {color:Social Icon Hover}; } h1, h2, h3, h4, h5, article.type_quote .quote { color: {color:Post Titles}; } a { color: {color:Link}; } a:hover { color: {color:Link Hover}; } article h2 a { color: {color:Post Titles}; } article h2 a:hover { opacity: 0.5; } article.type_link .the-link { background: {color:Link}; color: {color:Background}; } article.type_link .the-link:hover { background: {color:Link Hover}; } ::-moz-selection { background: {color:Link}; color: {color:Background}; text-shadow: none; } ::selection { background: {color:Link}; color: {color:Background}; text-shadow: none; }
+    {block:IfWhiteIcons} .image .icons li,.image .perma .go{background-color:#000!important}.icons li a{color:#fff!important} {/block:IfWhiteIcons} body { background: {color:Background}; color: {color:Text}; font-family: {font:BodyFont}; } a { color: {color:Link}; } a:hover { color: {color:Link Hover}; } h1.blogtitle {font-family: {font:BlogTitleFont};} .menu { margin-top: {text:Menu Top Margin}; } .timeago a, .group-author a { color: {color:Text}; } h1.blogtitle a{ color: {color:Blog Title}; } .menu .menu-toggle { color: {color:Menu Icon}; } .menu .menu-toggle .menu-toggle-hamburger:before, .menu .menu-toggle .menu-toggle-hamburger:after { background: {color:Menu Icon}; } .menu .menu-toggle:hover, .menu .menu-toggle.on { color: {color:Menu Icon}; } .menu .menu-toggle:hover .icon-menu, .menu.on .menu-toggle .icon-menu { color: {color:Menu Icon Hover}!important; } @media only screen and (min-width: 768px) { .menu nav input { background: {color:Background}; color: {color:Link}; } .menu nav input:focus { background: {color:Background}; color: {color:Link Hover}; } } @media only screen and (max-width: 768px) { .menu nav { background: {color:Menu Background}; } .menu nav:after{ border-bottom-color: {color:Menu Background}; } .menu nav ul li a { color: {color:Menu Text}; } .menu nav ul li a:hover { background: {color:Menu Hover Background}; color: {color:Menu Hover Text}; } .menu nav input { background: {color:Menu Background}; color: {color:Menu Text}; } .menu nav input:focus { background: {color:Menu Hover Background}; color: {color:Menu Hover Text};  } ::-webkit-input-placeholder { color: {color:Menu Text}; } :-moz-placeholder { color: {color:Menu Text}; } ::-moz-placeholder { color: {color:Menu Text}; } :-ms-input-placeholder { color: {color:Menu Text}; } .menu-foot,.menu-foot a{ color:{color:Menu Text}; }     .menu h3{ color:{color:Menu Text}; } } footer .type_pagination.pagination_load-more .load-more, footer .type_pagination .scroll-top, footer .type_pagination .pagination a, footer .post-nav a { color: {color:Menu Icon}; } footer .type_pagination .load-more:hover, footer .type_pagination .scroll-top:hover, footer .type_pagination .pagination a:hover, footer .post-nav a:hover { color: {color:Menu Icon}; } @media only screen and (min-width: 768px) { footer .type_pagination .load-more:hover, footer .type_pagination .scroll-top:hover, footer .type_pagination .pagination a:hover, footer .post-nav a:hover { color: {color:Menu Icon Hover}; } } .social-menu li a { color: {color:Social Icon}; } .social-menu li a:hover { color: {color:Social Icon Hover}; } h1, h2, h3, h4, h5, article.type_quote .quote { color: {color:Post Titles}; } a { color: {color:Link}; } a:hover { color: {color:Link Hover}; } article h2 a { color: {color:Post Titles}; } article h2 a:hover { opacity: 0.5; } article.type_link .the-link { background: {color:Link}; color: {color:Background}; } article.type_link .the-link:hover { background: {color:Link Hover}; } ::-moz-selection { background: {color:Link}; color: {color:Background}; text-shadow: none; } ::selection { background: {color:Link}; color: {color:Background}; text-shadow: none; }
 	    {CustomCSS}
     </style>
         {block:IfGoogleAnalyticsID}<script>
@@ -138,6 +142,18 @@
 				{block:IfURLBehance}<li><a href="{text:URL Behance}" target="_blank" title="Behance"><i class="icon-behance"></i></a></li>{/block:IfURLBehance}
 			</ul>
 		
+		{block:IfInstagramUserID}{block:IfInstagramAccessToken}<div class="api">
+            <h3>Instagram</h3>
+            <ul id="instagram"></ul>
+            </div>{/block:IfInstagramAccessToken}{/block:IfInstagramUserID}
+        {block:IfDribbbleUsername}<div class="api">
+                <h3>Dribbble</h3>
+                <ul id="dribbble"></ul>
+	        </div>{/block:IfDribbbleUsername}
+	        {block:IfFlickrID}<div class="api">
+	            <h3>Flickr</h3>
+	            <ul id="flickr"></ul>
+	        </div>{/block:IfFlickrID}
         <div class="menu-foot">
 			<span>&copy; {Title}</span>
 		<!-- Please, don't delete the credit to respect theme maker -->
@@ -396,6 +412,19 @@ $(function() {
 		}, 500);
 		return false;
     }); });
+(function($){$.fn.jflickrfeed=function(settings,callback){settings=$.extend(true,{flickrbase:'http://api.flickr.com/services/feeds/',feedapi:'photos_public.gne',limit:20,qstrings:{lang:'en-us',format:'json',jsoncallback:'?'},cleanDescription:true,useTemplate:true,itemTemplate:'',itemCallback:function(){}},settings);var url=settings.flickrbase+settings.feedapi+'?';var first=true;for(var key in settings.qstrings){if(!first)
+url+='&';url+=key+'='+settings.qstrings[key];first=false;}
+return $(this).each(function(){var $container=$(this);var container=this;$.getJSON(url,function(data){$.each(data.items,function(i,item){if(i<settings.limit){if(settings.cleanDescription){var regex=/<p>(.*?)<\/p>/g;var input=item.description;if(regex.test(input)){item.description=input.match(regex)[2]
+if(item.description!=undefined)
+item.description=item.description.replace('<p>','').replace('</p>','');}}
+item['image_s']=item.media.m.replace('_m','_s');item['image_t']=item.media.m.replace('_m','_t');item['image_m']=item.media.m.replace('_m','_m');item['image']=item.media.m.replace('_m','');item['image_b']=item.media.m.replace('_m','_b');delete item.media;if(settings.useTemplate){var template=settings.itemTemplate;for(var key in item){var rgx=new RegExp('{{'+key+'}}','g');template=template.replace(rgx,item[key]);}
+$container.append(template)}
+settings.itemCallback.call(container,item);}});if($.isFunction(callback)){callback.call(container,data);}});});}})(jQuery);
+(function(a){a.fn.jqinstapics=function(b){var c={user_id:null,access_token:null,count:10};var d=a.extend(c,b);return this.each(function(){var b=a(this),c="https://api.instagram.com/v1/users/"+d.user_id+"/media/recent?access_token="+d.access_token+"&count="+d.count+"&callback=?";a.getJSON(c,function(c){a.each(c.data,function(c,d){var e=a("<li/>").appendTo(b),f=a("<a/>",{href:d.link,target:"_blank"}).appendTo(e),g=a("<img/>",{src:d.images.thumbnail.url}).appendTo(f);if(d.caption){f.attr("title",d.caption.text)}})});if(d.user_id==null||d.access_token==null){b.append("<li>Please specify a User ID and Access Token, as outlined in the docs.</li>")}})}})(jQuery);
+(function(e){"use strict";e.jribbble={};var t=function(t,s){e.ajax({type:"GET",url:"http://api.dribbble.com"+t,data:s[1]||{},dataType:"jsonp",success:function(e){e===undefined?s[0]({error:!0}):s[0](e)}})},s={getShotById:"/shots/$/",getReboundsOfShot:"/shots/$/rebounds/",getShotsByList:"/shots/$/",getShotsByPlayerId:"/players/$/shots/",getShotsThatPlayerFollows:"/players/$/shots/following/",getPlayerById:"/players/$/",getPlayerFollowers:"/players/$/followers/",getPlayerFollowing:"/players/$/following/",getPlayerDraftees:"/players/$/draftees/",getCommentsOfShot:"/shots/$/comments/",getShotsThatPlayerLikes:"/players/$/shots/likes/"},o=function(e){return function(){var s=[].slice.call(arguments),o=e.replace("$",s.shift());t(o,s)}};for(var r in s)e.jribbble[r]=o(s[r])})(jQuery,window,document);
+{block:IfInstagramAccessToken}$("#instagram").jqinstapics({ "user_id": "{text:Instagram User ID}", "access_token": "{text:Instagram Access Token}", "count": 6 });{/block:IfInstagramAccessToken}
+{block:IfDribbbleUsername}$.jribbble.getShotsByPlayerId('{text:Dribbble Username}', function (playerShots) { var html = []; $.each(playerShots.shots, function (i, shot) { html.push('<li><a href="' + shot.url + '"><img src="' + shot.image_teaser_url + '" '); html.push('alt="' + shot.title + '" title="' + shot.title + '"></a></li>'); });$('#dribbble').html(html.join(''));}, {page: 1, per_page: 6});{/block:IfDribbbleUsername}
+{block:IfFlickrID}$('#flickr').jflickrfeed({limit: 6, qstrings: {id: '{text:Flickr ID}'}, itemTemplate:  '<li>' + '<a href="{{image_b}}"><img src="{{image_s}}" alt="Flickr Photos" /></a>' +  '</li>'});{/block:IfFlickrID}
 $(window).load(function() { $('.scroll-top').css('opacity', 1); });
 new UISearch( document.getElementById( 'sb-search' ) );
 </script>
